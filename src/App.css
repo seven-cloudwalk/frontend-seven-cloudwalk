@@ -10,13 +10,9 @@ body,
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 
-@font-face{
-  font-family:"intro-rust-g-base-2-line";
-  src: local("intro-rust-g-base-2-line"), url(./fonts/Intro-Rust/FontsFree-Net-IntroRustG-Base2Line.ttf) format("woff"),
-}
-
-.font-face-header-span {
-  font-family:"intro-rust-g-base-2-line"
+colgroup{
+  color: #C2F2DC;
 }
