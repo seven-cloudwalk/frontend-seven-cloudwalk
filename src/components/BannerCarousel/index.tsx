@@ -5,9 +5,10 @@ import Banner1 from "../../assets/Images/banner1.png";
 import Banner2 from "../../assets/Images/banner2.png";
 import Banner3 from "../../assets/Images/banner3.png";
 import * as S from "./style";
-import "./slider.css";
 import "swiper/css";
-import "swiper/css/bundle";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./slider.css";
 
 export const BannerCarousel = () => {
   return (
