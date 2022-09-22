@@ -1,0 +1,21 @@
+.between{
+    text-align: center;
+    position: fixed;
+    right: 38rem;
+    background-color: #C2F2DC;
+    width: 2rem;
+    height: 2.8rem;
+    transform: rotate(90deg);
+    color: white;
+}
+
+.betweenCadLogin {
+    position: relative;
+    background: none;
+    right: 1rem;
+    width: 1.6rem;
+    height: 4rem;
+    transform: rotate(90deg);
+    color: #014034;
+    margin-right: -2rem;
+}
