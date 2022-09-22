@@ -1,0 +1,19 @@
+.swiper-pagination-bullet {
+    background-color: rgb(0, 0, 0);
+    width: .8rem;
+    height: .8rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #04BF55;
+    width: .8rem;
+    height: .8rem;
+}
+
+.swiper-button-prev {
+    color: #04BF55;
+}
+
+.swiper-button-next {
+    color: #04BF55;
+}

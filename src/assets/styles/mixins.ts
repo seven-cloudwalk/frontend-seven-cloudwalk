@@ -25,11 +25,11 @@ const nameLogoHeader = () => css`
 `;
 
 const SearchHeader = () => css`
-  width: 70%;
+  width: 80%;
   background-color: ${colors.searchColor};
   border: none;
   border-radius: 0.3rem;
-  padding: 0.7rem;
+  padding: 0.5rem;
   font-family: ${constants.fontFamilyHeader};
   font-weight: ${constants.fontWeigthHeader};
   transition: all 0.5s ease-in-out;

@@ -1,15 +1,22 @@
 import { CgBorderStyleSolid } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
+import { BannerCarousel } from "../../components/BannerCarousel";
 import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
+import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
-import * as S from "./style";
 
 export const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <S.Header>
         <S.LogoSearchHeader>
-          <S.LogoHeader src={LogoNature} alt="Logo Nature Future" />
+          <S.LogoHeader
+            src={LogoNature}
+            alt="Logo Nature Future"
+            onClick={() => navigate("/")}
+          />
           <S.LogoNameHeader>NATURE FUTURE TICKET</S.LogoNameHeader>
 
           <S.SearchDiv>
@@ -31,6 +38,8 @@ export const Home = () => {
           </S.OptionsHeader>
         </S.LogoSearchHeader>
       </S.Header>
+
+      <BannerCarousel />
     </>
   );
 };
