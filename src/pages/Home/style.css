@@ -1,7 +1,7 @@
 .between{
     text-align: center;
-    position: fixed;
-    right: 38rem;
+    position: sticky;
+    right: 37.8rem;
     background-color: #C2F2DC;
     width: 2rem;
     height: 2.8rem;

@@ -1,8 +1,23 @@
 import { css } from "styled-components";
 import { colors } from "./colors";
 import { constants } from "./constants";
+// import Folhas from "../Images/folhas.png";
+
+const MainBackground = () => css`
+  width: 100%;
+  /* height: 100; */
+  background-color: #e6ffef;
+`;
+
+const CardSpace = () => css`
+  background-color: #e6ffef;
+  width: 100%;
+  height: 100%;
+`;
 
 const Header = () => css`
+  position: relative;
+  top: 0;
   background-color: ${colors.headerColor};
   width: 100%;
   height: 7.7%;
@@ -21,6 +36,13 @@ const nameLogoHeader = () => css`
   font-size: ${constants.fontSizeLogoHeader};
   color: ${colors.textLogoColor};
   margin-right: -2rem;
+  cursor: context-menu;
+`;
+
+const titleLogoHeader = () => css`
+  font-family: ${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeTitleProducts};
+  color: ${colors.textLogoColor};
   cursor: context-menu;
 `;
 
@@ -47,7 +69,7 @@ const BtnSearch = () => css`
   border: none;
   border-radius: 0.3rem;
   padding: 0.6rem;
-  margin-left: -0.5rem;
+  margin-left: -3rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   :hover {
@@ -72,22 +94,32 @@ const TitleOptionsHeader = () => css`
   border-top: none;
   border-right: none;
   border-left: none;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
-  :hover{
+  :hover {
     border-bottom-color: ${colors.hoverHeaderColor};
   }
-  :focus{
+  :focus {
     border-bottom-color: ${colors.hoverHeaderColor};
   }
-`
+`;
+
 export const CadLogin = () => css`
   position: absolute;
   display: flex;
   align-items: center;
   right: 1rem;
   gap: 1rem;
-`
+`;
+
+export const Folhas = () => css`
+  width: 100%;
+  height: 100%;
+  background: url(../Images/folhas.png);
+  background-attachment: scroll;
+  background-repeat: round;
+  background-size: auto;
+`;
 
 export const mixins = {
   Header,
@@ -97,5 +129,9 @@ export const mixins = {
   BtnSearch,
   OptionsHeader,
   TitleOptionsHeader,
-  CadLogin
+  CadLogin,
+  MainBackground,
+  Folhas,
+  CardSpace,
+  titleLogoHeader,
 };

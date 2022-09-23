@@ -1,6 +1,7 @@
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { BannerCarousel } from "../../components/BannerCarousel";
+import Folhas from "../../assets/Images/folhas.png";
 import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
@@ -9,7 +10,7 @@ import "./style.css";
 export const Home = () => {
   const navigate = useNavigate();
   return (
-    <>
+    <S.MainBackground>
       <S.Header>
         <S.LogoSearchHeader>
           <S.LogoHeader
@@ -40,6 +41,17 @@ export const Home = () => {
       </S.Header>
 
       <BannerCarousel />
-    </>
+
+      <S.CardSpace>
+        <S.TitleSpace>
+          <S.Divisors />
+          <S.TitleProducts>NOVOS PRODUTOS</S.TitleProducts>
+          <S.Divisors />
+        </S.TitleSpace>
+
+        <S.FolhasImg src={Folhas} />
+        <h1>Espaço do card</h1>
+      </S.CardSpace>
+    </S.MainBackground>
   );
 };
