@@ -96,7 +96,7 @@ export const TitleSpace = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2.5rem;
   margin-top: 2.5rem;
   margin-bottom: -5rem;
 `;
