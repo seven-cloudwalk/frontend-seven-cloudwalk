@@ -92,6 +92,7 @@ export const FolhasImg = styled.img`
     ${theme.mixins.Folhas}
   `}
 `;
+
 export const TitleSpace = styled.div`
   display: flex;
   justify-content: center;

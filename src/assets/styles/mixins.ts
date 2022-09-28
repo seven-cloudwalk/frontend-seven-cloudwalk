@@ -5,7 +5,7 @@ import { constants } from "./constants";
 
 const MainBackground = () => css`
   width: 100%;
-  /* height: 100; */
+  height: 100vh;
   background-color: #e6ffef;
 `;
 
