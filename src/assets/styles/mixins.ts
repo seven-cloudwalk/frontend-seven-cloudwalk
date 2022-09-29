@@ -126,7 +126,7 @@ const CardLoginPage = () => css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 27rem;
+  width: 27.5rem;
   height: 30rem;
   background-color: rgba(0, 0, 0, 0.459);
   border-radius: 0.5rem;
