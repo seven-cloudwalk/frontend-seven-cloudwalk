@@ -126,12 +126,12 @@ const CardLoginPage = () => css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 27.5rem;
+  width: 27rem;
   height: 30rem;
   background-color: rgba(0, 0, 0, 0.459);
   border-radius: 0.5rem;
-  -webkit-box-shadow: 1px 15px 21px 16px #000000; 
-box-shadow: 1px 15px 21px 16px #000000;
+  -webkit-box-shadow: 1px 15px 21px 16px #000000;
+  box-shadow: 1px 15px 21px 16px #000000;
   font-family: ${constants.fontFamilyHeader};
 `;
 

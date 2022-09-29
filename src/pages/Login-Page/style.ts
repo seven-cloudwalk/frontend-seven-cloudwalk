@@ -39,9 +39,9 @@ export const InputLabelLogin = styled.div`
     flex-direction: column;
     gap: 0.3rem;
     margin-bottom: 1.3rem;
-    .label-login {
+    .label {
       font-family: ${theme.constants.fontFamilyHeader};
-      color: ${theme.constants.textButtonsAndFooter};
+      color: ${theme.colors.logoLoginPage};
     }
   `}
 `;
@@ -95,7 +95,7 @@ export const pLoginPage = styled.p`
 
 export const spanLoginPage = styled.span`
   ${({ theme }) => css`
-    color: ${theme.colors.hoverHeaderColor};
+    color: ${theme.colors.logoLoginPage};
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
@@ -130,7 +130,7 @@ export const logoNameLoginPage = styled.div`
     justify-content: center;
     font-family: ${theme.constants.fontFamilyLogoHeader};
     font-size: ${theme.constants.fontSizeCardLogin};
-    color: ${theme.colors.hoverHeaderColor};
+    color: ${theme.colors.logoLoginPage};
     width: 100%;
     /* gap: .5rem; */
     margin-top: -2rem;

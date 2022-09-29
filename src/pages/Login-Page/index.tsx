@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import LogoNature from "../../assets/Icons/LogoNature.png";
+import LogoNature from "../../assets/Icons/LogoNature2.png";
 import * as S from "../Login-Page/style";
 
 export const LoginPage = () => {
