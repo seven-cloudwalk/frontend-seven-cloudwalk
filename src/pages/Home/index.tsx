@@ -29,10 +29,10 @@ export const Home = () => {
           </S.SearchDiv>
 
           <S.OptionsHeader>
-            <S.TitleOptionsHeader>Home</S.TitleOptionsHeader>
+            <S.TitleOptionsHeader onClick={() => navigate("/")}>Home</S.TitleOptionsHeader>
             <S.TitleOptionsHeader>Sobre nós</S.TitleOptionsHeader>
             <S.CadLogin>
-              <S.TitleOptionsHeader>Login</S.TitleOptionsHeader>
+              <S.TitleOptionsHeader onClick={() => navigate("/login")}>Login</S.TitleOptionsHeader>
               <CgBorderStyleSolid className="betweenCadLogin" />
               <S.TitleOptionsHeader>Cadastre-se</S.TitleOptionsHeader>
             </S.CadLogin>

@@ -104,7 +104,7 @@ const TitleOptionsHeader = () => css`
   }
 `;
 
-export const CadLogin = () => css`
+const CadLogin = () => css`
   position: absolute;
   display: flex;
   align-items: center;
@@ -112,13 +112,49 @@ export const CadLogin = () => css`
   gap: 1rem;
 `;
 
-export const Folhas = () => css`
+const Folhas = () => css`
   width: 100%;
   height: 100%;
   background: url(../Images/folhas.png);
   background-attachment: scroll;
   background-repeat: round;
   background-size: auto;
+`;
+
+const CardLoginPage = () => css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27rem;
+  height: 30rem;
+  background-color: rgba(0, 0, 0, 0.459);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 15px 21px 16px #000000; 
+box-shadow: 1px 15px 21px 16px #000000;
+  font-family: ${constants.fontFamilyHeader};
+`;
+
+const BtnLoginPage = () => css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-family: ${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeBtnCardLogin};
+  /* font-weight: bold; */
+  color: #000;
+  background-color: #009e45;
+  transition: all 0.4s ease-in-out;
+  /* margin-top: 1rem; */
+  :hover {
+    color: #fff;
+    background-color: ${colors.hoverHeaderColor};
+  }
 `;
 
 export const mixins = {
@@ -134,4 +170,6 @@ export const mixins = {
   Folhas,
   CardSpace,
   titleLogoHeader,
+  CardLoginPage,
+  BtnLoginPage,
 };
