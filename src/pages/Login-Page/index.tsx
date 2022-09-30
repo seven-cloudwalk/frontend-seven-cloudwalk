@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineRollback } from "react-icons/ai";
+import { LoginType } from "../../types/types";
+import { toast, ToastContainer } from "react-toastify";
 import LoginService from "../../services/authService";
 import LogoNature from "../../assets/Icons/LogoNature2.png";
 import IconBack from "../../assets/Icons/angulo-circulo-esquerda.svg";
 import * as S from "../Login-Page/style";
-import { LoginType } from "../../types/types";
-import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const LoginPage = () => {
   const [values, setValues] = useState({
@@ -30,28 +30,11 @@ export const LoginPage = () => {
     const jwt = response.data.token;
 
     if (!jwt) {
-      toast.error(response.data.message, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      toast.error(response.data.message)
     } else {
       localStorage.setItem("jwt", jwt);
       navigate("/");
-
-      toast.success("Login efetuado com sucesso!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      toast.success("Login efetuado com sucesso!");
     }
   };
 
@@ -106,17 +89,6 @@ export const LoginPage = () => {
           </S.LinkRegisterPage>
 
           <S.btnLogin>Entrar</S.btnLogin>
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
         </S.InputLoginField>
       </S.CardLogin>
     </S.MainSection>

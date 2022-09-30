@@ -6,7 +6,7 @@ const LoginService = {
     api
       .post("auth", values)
       .then((response: any) => response)
-      .catch((error) => error.response),
+      .catch((error: any) => error.response),
 
     //   loggedUser: () => api.get("/auth-logged")
 };

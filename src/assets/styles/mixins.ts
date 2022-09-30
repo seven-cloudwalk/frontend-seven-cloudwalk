@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 import { colors } from "./colors";
 import { constants } from "./constants";
-// import Folhas from "../Images/folhas.png";
 
 const MainBackground = () => css`
   width: 100%;
