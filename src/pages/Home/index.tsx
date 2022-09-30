@@ -1,6 +1,7 @@
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { BannerCarousel } from "../../components/BannerCarousel";
+import { IoIosArrowDropleft } from "react-icons/io";
 import Folhas from "../../assets/Images/folhas.png";
 import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
 import * as S from "./style";

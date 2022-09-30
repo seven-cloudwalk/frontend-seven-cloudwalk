@@ -22,7 +22,7 @@ export const CardLogin = styled.div`
   `}
 `;
 
-export const InputLoginField = styled.div`
+export const InputLoginField = styled.form`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ export const titleCardLogin = styled.p`
     text-align: center;
     color: #fff;
     font-size: 1.5rem;
-    margin-top: -.2rem;
+    margin-top: -0.2rem;
     margin-bottom: 2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
   `}
@@ -152,10 +152,25 @@ export const NatureLogo = styled.img`
   ${({ theme }) => css`
     width: 5rem;
     height: 5rem;
-    margin-left: -.7rem;
+    margin-left: -0.7rem;
   `}
 `;
 
 export const spanLogoLoginPage = styled.span`
- /* font-size: ; */
+  /* font-size: ; */
+`;
+
+export const IconBack = styled.img`
+  ${({ theme }) => css`
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    top: 2.5rem;
+    left: 5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    :hover {
+      transform: scale(1.08);
+    }
+  `}
 `;

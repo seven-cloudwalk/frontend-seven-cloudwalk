@@ -1,15 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineRollback } from "react-icons/ai";
+import LoginService from "../../services/authService";
 import LogoNature from "../../assets/Icons/LogoNature2.png";
+import IconBack from "../../assets/Icons/angulo-circulo-esquerda.svg";
 import * as S from "../Login-Page/style";
+import { LoginType } from "../../types/types";
+import { toast, ToastContainer } from "react-toastify";
 
 export const LoginPage = () => {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
   const navigate = useNavigate();
+
+  const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues((values: LoginType) => ({
+      ...values,
+      [event.target.name]: event.target.value,
+    }));
+    console.log(event);
+  };
+
+  const handleAuthLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const response = await LoginService.login(values);
+    const jwt = response.data.token;
+
+    if (!jwt) {
+      toast.error(response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } else {
+      localStorage.setItem("jwt", jwt);
+      navigate("/");
+
+      toast.success("Login efetuado com sucesso!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  };
+
   return (
     <S.MainSection>
+      <S.IconBack onClick={() => history.back()} src={IconBack} />
+
       <S.CardLogin>
         <S.headerCardLogin>
-          
           <S.logoNameLoginPage>
             <S.NatureLogo src={LogoNature} />
             <S.spanLogoLoginPage>Nature Future Ticket</S.spanLogoLoginPage>
@@ -18,12 +69,13 @@ export const LoginPage = () => {
           <S.titleCardLogin>Seja bem vindo!</S.titleCardLogin>
         </S.headerCardLogin>
 
-        <S.InputLoginField>
+        <S.InputLoginField onSubmit={handleAuthLogin}>
           <S.InputLabelLogin>
             <S.LabelLogin className="label" htmlFor="email">
               E-mail
             </S.LabelLogin>
             <S.InputLogin
+              onChange={handleChangesValues}
               type="email"
               id="email"
               name="email"
@@ -37,6 +89,7 @@ export const LoginPage = () => {
               Senha
             </S.LabelLogin>
             <S.InputLogin
+              onChange={handleChangesValues}
               type="password"
               id="password"
               name="password"
@@ -53,6 +106,17 @@ export const LoginPage = () => {
           </S.LinkRegisterPage>
 
           <S.btnLogin>Entrar</S.btnLogin>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </S.InputLoginField>
       </S.CardLogin>
     </S.MainSection>
