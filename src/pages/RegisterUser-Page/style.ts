@@ -16,13 +16,13 @@ export const MainSection = styled.section`
   `}
 `;
 
-export const CardLogin = styled.div`
+export const CardRegisterUser = styled.div`
   ${({ theme }) => css`
-    ${theme.mixins.CardLoginPage}
+    ${theme.mixins.CardRegisterUserPage}
   `}
 `;
 
-export const InputLoginField = styled.form`
+export const InputRegisterField = styled.form`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ export const InputLoginField = styled.form`
   `}
 `;
 
-export const InputLabelLogin = styled.div`
+export const InputLabelRegister = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ export const InputLabelLogin = styled.div`
   `}
 `;
 
-export const LabelLogin = styled.label`
+export const LabelRegister = styled.label`
   ${({ theme }) => css`
     font-size: ${theme.constants.fontSizeHeader};
     font-family: ${theme.constants.fontFamilyHeader};
@@ -55,7 +55,7 @@ export const LabelLogin = styled.label`
   `}
 `;
 
-export const InputLogin = styled.input`
+export const InputRegister = styled.input`
   ${({ theme }) => css`
     background-color: transparent;
     width: 20rem;
@@ -75,55 +75,23 @@ export const InputLogin = styled.input`
   `}
 `;
 
-export const LinkRegisterPage = styled.div`
+export const btnRegister = styled.button`
   ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    margin-left: -5.5rem;
-    margin-top: -3rem;
+    ${theme.mixins.BtnRegisterUserPage}
   `}
 `;
 
-export const pLoginPage = styled.p`
-  ${({ theme }) => css`
-    color: white;
-  `}
-`;
-
-export const spanLoginPage = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.logoLoginPage};
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    :hover {
-      transform: scale(1.07);
-      margin-left: 0.2rem;
-      font-weight: bold;
-    }
-  `}
-`;
-
-export const btnLogin = styled.button`
-  ${({ theme }) => css`
-    ${theme.mixins.BtnLoginPage}
-  `}
-`;
-
-export const headerCardLogin = styled.div`
+export const headerCardRegister = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: .6rem;
   `}
 `;
 
-export const logoNameLoginPage = styled.div`
+export const logoNameRegisterPage = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
@@ -132,19 +100,17 @@ export const logoNameLoginPage = styled.div`
     font-size: ${theme.constants.fontSizeCardLogin};
     color: ${theme.colors.logoLoginPage};
     width: 100%;
-    /* gap: .5rem; */
-    margin-top: -2rem;
   `}
 `;
 
-export const titleCardLogin = styled.p`
+export const titleCardRegister = styled.p`
   ${({ theme }) => css`
     text-align: center;
     color: #fff;
     font-size: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
-    margin-top: -.2rem;
   `}
 `;
 
@@ -156,7 +122,7 @@ export const NatureLogo = styled.img`
   `}
 `;
 
-export const spanLogoLoginPage = styled.span`
+export const spanLogoRegisterPage = styled.span`
   /* font-size: ; */
 `;
 
@@ -167,6 +133,21 @@ export const IconBack = styled.img`
     height: 3.5rem;
     top: 2.5rem;
     left: 5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    :hover {
+      transform: scale(1.08);
+    }
+  `}
+`;
+
+export const IconHome = styled.img`
+  ${({ theme }) => css`
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 2.1rem;
+    left: 10rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
