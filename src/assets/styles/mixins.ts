@@ -127,6 +127,7 @@ const CardLoginPage = () => css`
   justify-content: center;
   width: 27rem;
   height: 30rem;
+  padding: .3rem;
   background-color: rgba(0, 0, 0, 0.459);
   border-radius: 0.5rem;
   -webkit-box-shadow: 1px 15px 21px 16px #000000;
