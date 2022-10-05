@@ -166,7 +166,7 @@ export const IconBack = styled.img`
     width: 3.5rem;
     height: 3.5rem;
     top: 2.5rem;
-    left: 5rem;
+    left: 3rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {

@@ -127,11 +127,11 @@ const CardLoginPage = () => css`
   justify-content: center;
   width: 27rem;
   height: 30rem;
-  padding: .3rem;
-  background-color: rgba(0, 0, 0, 0.459);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 1px 15px 21px 16px #000000;
-  box-shadow: 1px 15px 21px 16px #000000;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.73);
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 2px 10px 9px 2px #000000;
+  box-shadow: 2px 10px 9px 2px #000000;
   font-family: ${constants.fontFamilyHeader};
 `;
 
@@ -141,12 +141,12 @@ const CardRegisterUserPage = () => css`
   align-items: center;
   justify-content: center;
   width: 27rem;
-  height: 36rem;
-  padding: .3rem;
-  background-color: rgba(0, 0, 0, 0.459);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 1px 15px 21px 16px #000000;
-  box-shadow: 1px 15px 21px 16px #000000;
+  height: 42rem;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.73);
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 2px 10px 9px 2px #000000;
+  box-shadow: 2px 10px 9px 2px #000000;
   font-family: ${constants.fontFamilyHeader};
 `;
 
@@ -162,13 +162,15 @@ const BtnLoginPage = () => css`
   font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeBtnCardLogin};
   /* font-weight: bold; */
-  color: #000;
+  color: #fff;
   background-color: #009e45;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /* margin-top: 1rem; */
   :hover {
-    color: #fff;
     background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+    transform: scale(1.02);
   }
 `;
 
@@ -179,18 +181,19 @@ const BtnRegisterUserPage = () => css`
   width: 18rem;
   height: 2.5rem;
   padding: 0.5rem;
+  margin-top: 1rem;
   border: none;
   border-radius: 0.3rem;
   font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeBtnCardLogin};
-  /* font-weight: bold; */
-  color: #000;
+  color: #fff;
   background-color: #009e45;
   transition: all 0.4s ease-in-out;
-  /* margin-top: 1rem; */
   :hover {
-    color: #fff;
     background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+    transform: scale(1.02);
   }
 `;
 

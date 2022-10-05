@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { BannerCarousel } from "../../components/BannerCarousel";
+import { HeaderComponent } from "../../components/HeaderComponent";
 import Folhas from "../../assets/Images/folhas.png";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
-import { HeaderComponent } from "../../components/HeaderComponent";
 
 export const Home = () => {
   const navigate = useNavigate();
   return (
     <S.MainBackground>
-      <HeaderComponent />
       
+      <HeaderComponent />
       <BannerCarousel />
 
       <S.CardSpace>
@@ -24,6 +24,7 @@ export const Home = () => {
         <S.FolhasImg src={Folhas} />
         <h1>Espaço do card</h1>
       </S.CardSpace>
+
     </S.MainBackground>
   );
 };

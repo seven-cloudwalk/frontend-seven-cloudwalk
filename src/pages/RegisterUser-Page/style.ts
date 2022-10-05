@@ -71,6 +71,7 @@ export const InputRegister = styled.input`
     }
     ::placeholder {
       color: #8e8e8e;
+      font-size: 0.8rem;
     }
   `}
 `;
@@ -132,7 +133,7 @@ export const IconBack = styled.img`
     width: 3.5rem;
     height: 3.5rem;
     top: 2.5rem;
-    left: 5rem;
+    left: 3rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
@@ -147,11 +148,44 @@ export const IconHome = styled.img`
     width: 4rem;
     height: 4rem;
     top: 2.1rem;
-    left: 10rem;
+    left: 8rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
       transform: scale(1.08);
     }
+  `}
+`;
+
+export const CNPJField = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: -2.5rem;
+  `}
+`;
+
+export const labelInputCNPJ = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  `}
+`;
+
+export const LabelRadio = styled.label`
+  ${({ theme }) => css`
+    font-family: ${theme.constants.fontFamilyHeader};
+    color: ${theme.colors.logoLoginPage};
+    font-weight: bold;
+  `}
+`;
+
+export const InputRadio = styled.input`
+  ${({ theme }) => css`
+    display: none;
   `}
 `;
