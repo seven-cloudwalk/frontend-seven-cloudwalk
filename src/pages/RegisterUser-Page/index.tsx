@@ -8,32 +8,30 @@ import IconHome from "../../assets/Icons/pagina-inicial.png";
 import userService from "../../services/userService";
 import * as S from "../RegisterUser-Page/style";
 
+//TODO: Resolver erro do boolean do usuario PF, criar botão de loggout e quando usuario logar, mostrar quem está logado no header, onde tem o botão de login...
+
 export const RegisterUserPage = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<createUserType>({
     nickname: "",
     email: "",
     password: "",
-    pj: false,
+    accountType: undefined,
   });
 
   const navigate = useNavigate();
 
   const handleChangesValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value === "PJ") {
-      setValues((values: createUserType) => ({
-        ...values,
-        [event.target.name]: event.target.checked,
-      }));
-
-      console.log(event);
-    } else {
-      setValues((values: createUserType) => ({
-        ...values,
-        [event.target.name]: event.target.value,
-      }));
-      console.log(event);
-    }
+    setValues((values: createUserType) => ({
+      ...values,
+      [event.target.name]: event.target.value,
+    }));
+    // console.log(event);
+    // console.log({ values });
   };
+
+  console.log(values.accountType, values.accountType === "PJ");
+
+  //TODO: Resolver erro do boolean do usuario PF, criar botão de loggout e quando usuario logar, mostrar quem está logado no header, onde tem o botão de login...
 
   const createUser = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -41,7 +39,7 @@ export const RegisterUserPage = () => {
 
     if (response.status === 201) {
       toast.success("Usuário criado com sucesso!");
-      navigate("/login")
+      navigate("/login");
     } else {
       toast.error(response.data.message);
     }
@@ -76,7 +74,7 @@ export const RegisterUserPage = () => {
               placeholder="Nome"
               onChange={handleChangesValue}
               autoComplete="off"
-              />
+            />
           </S.InputLabelRegister>
           <S.InputLabelRegister>
             <S.LabelRegister htmlFor="email">E-mail</S.LabelRegister>
@@ -87,7 +85,7 @@ export const RegisterUserPage = () => {
               placeholder="E-mail"
               onChange={handleChangesValue}
               autoComplete="off"
-              />
+            />
           </S.InputLabelRegister>
           <S.InputLabelRegister>
             <S.LabelRegister htmlFor="password">Senha</S.LabelRegister>
@@ -98,35 +96,40 @@ export const RegisterUserPage = () => {
               placeholder="Senha"
               onChange={handleChangesValue}
               autoComplete="off"
-              />
+            />
           </S.InputLabelRegister>
 
           <S.CNPJField>
             <h1>Selecione uma das opções:</h1>
-            <S.labelInputCNPJ>
-              <S.LabelRadio>
-                <S.InputRadio
-                  onChange={handleChangesValue}
-                  type="radio"
-                  name="pj"
-                  value="PF"
-                  checked={values.pj}
-                  autoComplete="off"
-                />
-                Pessoa Fisica
-              </S.LabelRadio>
 
-              <S.LabelRadio>
+            <S.OptionsCNPJ>
+              <S.labelInputCNPJ>
                 <S.InputRadio
                   onChange={handleChangesValue}
                   type="radio"
-                  name="pj"
-                  value="PJ"
-                  autoComplete="off"
+                  id="PessoaFisica"
+                  name="accountType"
+                  value="PF"
+                  defaultChecked={false}
                 />
-                Pessoa Jurídica(CNPJ)
-              </S.LabelRadio>
-            </S.labelInputCNPJ>
+                <S.LabelRadio htmlFor="PessoaFisica">
+                  Pessoa Fisica
+                </S.LabelRadio>
+              </S.labelInputCNPJ>
+
+              <S.labelInputCNPJ>
+                <S.InputRadio
+                  onChange={handleChangesValue}
+                  type="radio"
+                  id="PessoaJuridica"
+                  name="accountType"
+                  value="PJ"
+                />
+                <S.LabelRadio htmlFor="PessoaJuridica">
+                  Pessoa Juridica (CNPJ)
+                </S.LabelRadio>
+              </S.labelInputCNPJ>
+            </S.OptionsCNPJ>
           </S.CNPJField>
 
           <S.btnRegister>Cadastrar</S.btnRegister>

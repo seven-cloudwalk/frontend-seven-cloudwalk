@@ -58,16 +58,18 @@ export const LabelRegister = styled.label`
 export const InputRegister = styled.input`
   ${({ theme }) => css`
     background-color: transparent;
-    width: 20rem;
+    width: 22rem;
     font-size: 1.02rem;
     border: 1px solid transparent;
     border-bottom-color: #fff;
     outline: 0;
     transition: all 0.3s ease-in-out;
     color: #fff;
+    padding: 0.1rem;
     :focus {
       background: none;
       border-bottom: 2px solid ${theme.colors.hoverHeaderColor};
+      padding: 0.1rem;
     }
     ::placeholder {
       color: #8e8e8e;
@@ -170,22 +172,46 @@ export const CNPJField = styled.div`
 
 export const labelInputCNPJ = styled.div`
   ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    ${InputRadio} + ${LabelRadio}::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      background-color: rgba(0, 0, 0, 0.73);
+      border: 2px solid #04bf55;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-bottom: 3px;
+      cursor: pointer;
+    };
+
+    ${InputRadio}:checked + ${LabelRadio}::before {
+      background-color: white;
+      box-sizing: border-box;
+      border: 5px solid #04bf55;
+      padding: 5px;
+    };
   `}
 `;
 
-export const LabelRadio = styled.label`
+export const OptionsCNPJ = styled.div`
   ${({ theme }) => css`
-    font-family: ${theme.constants.fontFamilyHeader};
-    color: ${theme.colors.logoLoginPage};
-    font-weight: bold;
+    display: flex;
+    gap: 1rem;
   `}
 `;
 
 export const InputRadio = styled.input`
   ${({ theme }) => css`
     display: none;
+  `}
+`;
+
+export const LabelRadio = styled.label`
+  ${({ theme }) => css`
+    font-family: ${theme.constants.fontFamilyHeader};
+    font-weight: bold;
+    cursor: pointer;
   `}
 `;

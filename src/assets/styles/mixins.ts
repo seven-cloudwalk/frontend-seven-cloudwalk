@@ -140,7 +140,7 @@ const CardRegisterUserPage = () => css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 27rem;
+  width: 28rem;
   height: 42rem;
   padding: 0.3rem;
   background-color: rgba(0, 0, 0, 0.73);
@@ -161,11 +161,9 @@ const BtnLoginPage = () => css`
   border-radius: 0.3rem;
   font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeBtnCardLogin};
-  /* font-weight: bold; */
   color: #fff;
   background-color: #009e45;
   transition: all 0.3s ease-in-out;
-  /* margin-top: 1rem; */
   :hover {
     background-color: ${colors.hoverHeaderColor};
     -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
