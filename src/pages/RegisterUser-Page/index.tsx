@@ -8,7 +8,6 @@ import IconHome from "../../assets/Icons/pagina-inicial.png";
 import userService from "../../services/userService";
 import * as S from "../RegisterUser-Page/style";
 
-//TODO: Resolver erro do boolean do usuario PF, criar botão de loggout e quando usuario logar, mostrar quem está logado no header, onde tem o botão de login...
 
 export const RegisterUserPage = () => {
   const [values, setValues] = useState<createUserType>({
@@ -30,8 +29,6 @@ export const RegisterUserPage = () => {
   };
 
   console.log(values.accountType, values.accountType === "PJ");
-
-  //TODO: Resolver erro do boolean do usuario PF, criar botão de loggout e quando usuario logar, mostrar quem está logado no header, onde tem o botão de login...
 
   const createUser = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

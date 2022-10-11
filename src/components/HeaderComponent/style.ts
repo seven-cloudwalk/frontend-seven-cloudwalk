@@ -75,3 +75,9 @@ export const CadLogin = styled.div`
     ${theme.mixins.CadLogin}
   `}
 `;
+
+export const BtnLogout = styled.img`
+  ${({ theme }) => css`
+    ${theme.mixins.BtnLogout}
+  `}
+`;

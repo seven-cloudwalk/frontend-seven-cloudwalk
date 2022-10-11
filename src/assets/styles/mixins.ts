@@ -80,8 +80,9 @@ const OptionsHeader = () => css`
   position: absolute;
   display: flex;
   align-items: center;
-  right: 5rem;
-  width: 23%;
+  margin-left: 1rem;
+  left: 85rem;
+  width: 100%;
   gap: 2.7rem;
 `;
 
@@ -89,6 +90,7 @@ const TitleOptionsHeader = () => css`
   font-family: ${constants.fontFamilyHeader};
   font-size: ${constants.fontSizeHeader};
   font-weight: ${constants.fontWeigthHeader};
+  padding: .2rem;
   border: 2px solid transparent;
   border-top: none;
   border-right: none;
@@ -97,6 +99,7 @@ const TitleOptionsHeader = () => css`
   cursor: pointer;
   :hover {
     border-bottom-color: ${colors.hoverHeaderColor};
+    padding: .2rem;
   }
   :focus {
     border-bottom-color: ${colors.hoverHeaderColor};
@@ -107,7 +110,7 @@ const CadLogin = () => css`
   position: absolute;
   display: flex;
   align-items: center;
-  right: 1rem;
+  right: 89rem;
   gap: 1rem;
 `;
 
@@ -195,6 +198,24 @@ const BtnRegisterUserPage = () => css`
   }
 `;
 
+const BtnLogout = () => css`
+  position: absolute;
+  top: 1.2rem;
+  right: -1.5rem;
+  width: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: .2rem;
+  cursor: pointer;
+  :hover {
+    padding: .2rem;
+    border-bottom-color: ${colors.hoverHeaderColor};
+  }
+`;
+
 export const mixins = {
   Header,
   LogoHeader,
@@ -212,4 +233,5 @@ export const mixins = {
   BtnLoginPage,
   CardRegisterUserPage,
   BtnRegisterUserPage,
+  BtnLogout,
 };

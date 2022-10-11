@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { createUserType } from "../../types/types";
 import { useNavigate } from "react-router-dom";
+import LogoutButton from "../../assets/Icons/logoutButton.svg";
 import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
 import * as S from "./style";
+
 
 export const HeaderComponent = (props: { loggedUser: createUserType }) => {
   const jwt = localStorage.getItem("jwt");
@@ -15,6 +17,14 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
   }, []);
 
   const navigate = useNavigate();
+
+  const nicknameUser = "Olá, " + props.loggedUser.nickname;
+
+  const LogoutBtn = () => {
+    localStorage.clear();
+    navigate("/")
+  };
+
   return (
     <S.Header>
       <S.LogoSearchHeader>
@@ -40,14 +50,14 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
           <S.TitleOptionsHeader>Sobre nós</S.TitleOptionsHeader>
 
           <S.CadLogin>
-            <S.TitleOptionsHeader onClick={() => navigate("/login")}>
-              {jwt ? props.loggedUser.nickname : "Login"}
+            <S.TitleOptionsHeader onClick={jwt ? "" : () => navigate("/login")}>
+               {jwt ? nicknameUser : "Login"}
             </S.TitleOptionsHeader>
 
             <CgBorderStyleSolid className="betweenCadLogin" />
 
             <S.TitleOptionsHeader>
-              {jwt ? props.loggedUser.nickname : "Cadastre-se"}
+              {jwt ? <S.BtnLogout src={LogoutButton} onClick={LogoutBtn} /> : "Cadastre-se"}
             </S.TitleOptionsHeader>
           </S.CadLogin>
         </S.OptionsHeader>
