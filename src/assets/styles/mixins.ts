@@ -80,8 +80,9 @@ const OptionsHeader = () => css`
   position: absolute;
   display: flex;
   align-items: center;
-  right: 5rem;
-  width: 23%;
+  margin-left: 1rem;
+  left: 85rem;
+  width: 100%;
   gap: 2.7rem;
 `;
 
@@ -89,6 +90,7 @@ const TitleOptionsHeader = () => css`
   font-family: ${constants.fontFamilyHeader};
   font-size: ${constants.fontSizeHeader};
   font-weight: ${constants.fontWeigthHeader};
+  padding: .2rem;
   border: 2px solid transparent;
   border-top: none;
   border-right: none;
@@ -97,6 +99,7 @@ const TitleOptionsHeader = () => css`
   cursor: pointer;
   :hover {
     border-bottom-color: ${colors.hoverHeaderColor};
+    padding: .2rem;
   }
   :focus {
     border-bottom-color: ${colors.hoverHeaderColor};
@@ -107,7 +110,7 @@ const CadLogin = () => css`
   position: absolute;
   display: flex;
   align-items: center;
-  right: 1rem;
+  right: 89rem;
   gap: 1rem;
 `;
 
@@ -127,10 +130,26 @@ const CardLoginPage = () => css`
   justify-content: center;
   width: 27rem;
   height: 30rem;
-  background-color: rgba(0, 0, 0, 0.459);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 1px 15px 21px 16px #000000;
-  box-shadow: 1px 15px 21px 16px #000000;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.73);
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 2px 10px 9px 2px #000000;
+  box-shadow: 2px 10px 9px 2px #000000;
+  font-family: ${constants.fontFamilyHeader};
+`;
+
+const CardRegisterUserPage = () => css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 28rem;
+  height: 42rem;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.73);
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 2px 10px 9px 2px #000000;
+  box-shadow: 2px 10px 9px 2px #000000;
   font-family: ${constants.fontFamilyHeader};
 `;
 
@@ -145,14 +164,55 @@ const BtnLoginPage = () => css`
   border-radius: 0.3rem;
   font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeBtnCardLogin};
-  /* font-weight: bold; */
-  color: #000;
+  color: #fff;
+  background-color: #009e45;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+    transform: scale(1.02);
+  }
+`;
+
+const BtnRegisterUserPage = () => css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-family: ${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeBtnCardLogin};
+  color: #fff;
   background-color: #009e45;
   transition: all 0.4s ease-in-out;
-  /* margin-top: 1rem; */
   :hover {
-    color: #fff;
     background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+    transform: scale(1.02);
+  }
+`;
+
+const BtnLogout = () => css`
+  position: absolute;
+  top: 1.2rem;
+  right: -1.5rem;
+  width: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding: .2rem;
+  cursor: pointer;
+  :hover {
+    padding: .2rem;
+    border-bottom-color: ${colors.hoverHeaderColor};
   }
 `;
 
@@ -171,4 +231,7 @@ export const mixins = {
   titleLogoHeader,
   CardLoginPage,
   BtnLoginPage,
+  CardRegisterUserPage,
+  BtnRegisterUserPage,
+  BtnLogout,
 };

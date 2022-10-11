@@ -43,6 +43,7 @@ export const LoginPage = () => {
       <S.IconBack onClick={() => history.back()} src={IconBack} />
 
       <S.CardLogin>
+        
         <S.headerCardLogin>
           <S.logoNameLoginPage>
             <S.NatureLogo src={LogoNature} />
@@ -83,7 +84,7 @@ export const LoginPage = () => {
 
           <S.LinkRegisterPage>
             <S.pLoginPage>Não tem conta? </S.pLoginPage>
-            <S.spanLoginPage onClick={() => navigate("/cadastro")}>
+            <S.spanLoginPage onClick={() => navigate("/register-user")}>
               Cadastre-se
             </S.spanLoginPage>
           </S.LinkRegisterPage>

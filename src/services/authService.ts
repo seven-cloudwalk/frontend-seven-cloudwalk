@@ -8,6 +8,11 @@ const LoginService = {
       .then((response: any) => response)
       .catch((error: any) => error.response),
 
+  loggedUser: () =>
+    api
+      .get("auth/logged")
+      .then((response: any) => response)
+      .catch((error: any) => error.response),
 };
 
 export default LoginService;
