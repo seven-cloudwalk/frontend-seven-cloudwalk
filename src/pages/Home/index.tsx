@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { BannerCarousel } from "../../components/BannerCarousel";
 import Folhas from "../../assets/Images/folhas.png";
 import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
+import LogoNatureDark from "../../assets/Icons/LogoNatureFuture.png"
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
@@ -52,6 +53,11 @@ export const Home = () => {
         <S.FolhasImg src={Folhas} />
         <h1>Espaço do card</h1>
       </S.CardSpace>
+      <S.Footer>
+        <S.LogoFooter src = {LogoNatureDark} />
+        <S.TitleLogoFooter> NATURAL FUTURE TICKET</S.TitleLogoFooter>
+
+      </S.Footer>
     </S.MainBackground>
   );
 };

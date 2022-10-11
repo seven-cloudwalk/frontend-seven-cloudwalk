@@ -120,6 +120,28 @@ export const Folhas = () => css`
   background-repeat: round;
   background-size: auto;
 `;
+const LogoFooter = () => css`
+  width: 280px;
+  height: 280px;
+  margin-right: -1rem;
+  cursor: pointer;
+`;
+export const Footer = () => css`
+  width: 100%;
+  height:300px;
+  color: ${colors.footerTextColor};
+  background-color: ${colors.footerColor};
+`
+export const TitleFooter = () => css`
+ color: ${colors.footerTextColor};
+ font-family: ${constants.fontFamilyLogoFooter};
+ font-size: ${constants.fontSizeTitlesFooter};
+`
+export const TitleLogoFooter = () => css`
+ color: ${colors.footerTextColor};
+ font-family: ${constants.fontFamilyLogoFooter};
+ font-size: ${constants.fontSizeLogoFooter}
+`
 
 export const mixins = {
   Header,
@@ -134,4 +156,7 @@ export const mixins = {
   Folhas,
   CardSpace,
   titleLogoHeader,
+  LogoFooter,
+  Footer,
+  TitleLogoFooter,
 };
