@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { createUserType } from "../../types/types";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +18,7 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
 
   const navigate = useNavigate();
 
-  const nicknameUser = "Olá, " + props.loggedUser.nickname;
+  const nicknameUser = "Olá, " + props.loggedUser.nickname.split(' ')[0] + " " + props.loggedUser.nickname.split(' ')[1];
 
   const LogoutBtn = () => {
     localStorage.clear();
@@ -50,13 +50,13 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
           <S.TitleOptionsHeader>Sobre nós</S.TitleOptionsHeader>
 
           <S.CadLogin>
-            <S.TitleOptionsHeader onClick={jwt ? "" : () => navigate("/login")}>
+            <S.TitleOptionsHeader onClick={jwt ? undefined : () => navigate("/login")}>
                {jwt ? nicknameUser : "Login"}
             </S.TitleOptionsHeader>
 
             <CgBorderStyleSolid className="betweenCadLogin" />
 
-            <S.TitleOptionsHeader>
+            <S.TitleOptionsHeader onClick={jwt ? undefined : () => navigate("/register-user")}>
               {jwt ? <S.BtnLogout src={LogoutButton} onClick={LogoutBtn} /> : "Cadastre-se"}
             </S.TitleOptionsHeader>
           </S.CadLogin>

@@ -24,8 +24,7 @@ export const RegisterUserPage = () => {
       ...values,
       [event.target.name]: event.target.value,
     }));
-    // console.log(event);
-    // console.log({ values });
+
   };
 
   console.log(values.accountType, values.accountType === "PJ");
@@ -33,9 +32,9 @@ export const RegisterUserPage = () => {
   const createUser = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const response = await userService.createUser(values);
-
+    
     if (response.status === 201) {
-      toast.success("Usuário criado com sucesso!");
+      toast.success(response.data);
       navigate("/login");
     } else {
       toast.error(response.data.message);
