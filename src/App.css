@@ -11,6 +11,7 @@ body,
   outline: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #e6ffef;
 }
 
 .um {

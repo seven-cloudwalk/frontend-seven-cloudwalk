@@ -43,6 +43,7 @@ export const Home = () => {
       <BannerCarousel />
 
       <S.CardSpace>
+        
         <S.TitleSpace>
           <S.Divisors />
           <S.TitleProducts>NOVOS PRODUTOS</S.TitleProducts>
@@ -52,6 +53,7 @@ export const Home = () => {
         <S.FolhasImg src={Folhas} />
         <h1>Espaço do card</h1>
       </S.CardSpace>
+    
     </S.MainBackground>
   );
 };
