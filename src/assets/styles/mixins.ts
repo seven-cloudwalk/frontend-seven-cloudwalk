@@ -304,6 +304,82 @@ const OptionsBtnCard = () => css`
     transform: scale(1.09);
   }
 `;
+const LogoFooter = () => css`
+  width: 280px;
+  height: 280px;
+  margin-right: -1rem;
+  cursor: pointer;
+`;
+
+export const Footer = () => css`
+  width: 100%;
+  height:300px;
+  color: ${colors.footerTextColor};
+  background-color: ${colors.footerColor};
+`
+export const TitleFooter = () => css`
+ color: ${colors.footerTextColor};
+ font-family: ${constants.fontFamilyLogoFooter};
+ font-size: ${constants.fontSizeTitlesFooter};
+`
+export const TitleLogoFooter = () => css`
+ color: ${colors.footerTextColor};
+ font-family: ${constants.fontFamilyLogoFooter};
+ font-size: ${constants.fontSizeLogoFooter}
+
+const Footer = () => css`
+  width: 100%;
+  height: 220px;
+  background-color: ${colors.footerColor};
+  display: inline-grid;
+  grid-template-column: auto auto auto auto auto;
+  justify-content: space-evenly;
+  align-content: center;
+  
+`;
+const LogoFooter = () => css`
+  width:200px;
+  height: 200px;
+  grid-column: 1;
+  align-self:center;
+`;
+const nameLogoFooter =() => css`
+  font-family:${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeLogoFooter};
+  color: ${colors.colorLogoFooter};
+  text-align: right;
+  grid-column: 2;
+  align-self:center;
+  padding-right:15px;
+  border-right:3px solid white;
+`;
+const titleFooter= () => css`
+  font-family:${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeHeader};
+  color: ${colors.colorLogoFooter};
+  grid-column:3;
+  padding-top:20px;
+`;
+const titleFooter2= () => css`
+  font-family:${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeHeader};
+  color: ${colors.colorLogoFooter};
+  grid-column:4;
+  padding-top:20px;
+`;
+const titleFooter3= () => css`
+  font-family:${constants.fontFamilyLogoHeader};
+  font-size: ${constants.fontSizeHeader};
+  color: ${colors.colorLogoFooter};
+  grid-column:5;
+  padding-top:20px;
+`;
+const itemFooter =() => css`
+  text-decoration: none;
+  color: ${colors.colorLogoFooter};
+  font-size: ${constants.fontSizeItensFooter};
+  font-family: ${constants.fontFamilyHeader};
+`
 
 export const mixins = {
   Header,
@@ -318,6 +394,18 @@ export const mixins = {
   Folhas,
   CardSpace,
   titleLogoHeader,
+  LogoFooter,
+  Footer,
+  TitleLogoFooter,
+  CardLoginPage,
+  BtnLoginPage,
+  Footer,
+  LogoFooter,
+  nameLogoFooter,
+  titleFooter,
+  titleFooter2,
+  titleFooter3,
+  itemFooter,
   CardLoginPage,
   BtnLoginPage,
   CardRegisterUserPage,
