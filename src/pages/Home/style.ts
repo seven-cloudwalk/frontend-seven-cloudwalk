@@ -43,7 +43,7 @@ export const Divisors = styled.div`
 export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: 70%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;

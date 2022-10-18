@@ -104,4 +104,11 @@ export const Trees = [
     price: 30,
     image: "https://i.imgur.com/zIBmPpd.jpg",
   },
+  {
+    name: "Cerejeira s",
+    cod: 16,
+    description: "Semente de Cerejeira",
+    price: 30,
+    image: "https://i.imgur.com/zIBmPpd.jpg",
+  },
 ];

@@ -13,7 +13,7 @@ export const SpaceCard = styled.section`
   gap: 5rem;
   margin-top: 1.5rem;
   ::-webkit-scrollbar {
-    width: 0.6rem;
+    width: 0.4rem;
   }
   ::-webkit-scrollbar-thumb {
     background: #04bf5592;

@@ -4,7 +4,7 @@ import StarRatingComponent from "react-star-rating-component";
 import trees from "../../assets/Images/pngegg.png";
 import * as S from "./style";
 
-export const CardComponent = () => {
+export const CardComponent = () => {''
   return (
     <S.SpaceCard>
       {Trees.map((tree) => (
