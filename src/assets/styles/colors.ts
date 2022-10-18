@@ -1,5 +1,6 @@
 export const colors = {
   headerColor: "#ffff",
+  logoLoginPage: "#009e45",
   hoverHeaderColor: "#04bf55",
   backgroundSearchFocusColor: "#009440b7",
   searchColor: "#C2F2DC",
