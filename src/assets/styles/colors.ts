@@ -9,4 +9,6 @@ export const colors = {
   buttonSearch: "#C2F2DC",
   footerColor: "#014034",
   textLogoColor: "#014034",
+  footerTextColor: "#ffff",
+  colorLogoFooter:"#fff",
 };

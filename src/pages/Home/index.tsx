@@ -4,11 +4,14 @@ import { BannerCarousel } from "../../components/BannerCarousel";
 import { HeaderComponent } from "../../components/HeaderComponent";
 import { createUserType } from "../../types/types";
 import { CardComponent } from "../../components/CardComponent";
+import { FooterComponent } from "../../components/FooterComponent"
 import LoginService from "../../services/authService";
 import Folhas from "../../assets/Images/folhas.png";
+import LogoNature from "../../assets/Icons/nature_future_ticket_1.png";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
+
 
 export const Home = () => {
   const [userLogged, setUserLogged] = useState<createUserType>({
@@ -54,6 +57,15 @@ export const Home = () => {
 
         <S.FolhasImg src={Folhas} />
       </S.CardSpace>
+
+      {/* <S.Footer>
+        <S.LogoFooter src = {LogoNatureDark} />
+        <S.TitleLogoFooter> NATURAL FUTURE TICKET</S.TitleLogoFooter>
+      </S.Footer> */}
+
+      <FooterComponent />
+
     </S.MainBackground>
+    
   );
 };
