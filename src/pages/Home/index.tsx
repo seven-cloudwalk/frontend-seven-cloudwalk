@@ -7,7 +7,12 @@ import LogoNatureDark from "../../assets/Icons/LogoNatureFuture.png"
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
+<<<<<<< Updated upstream
 
+=======
+import { HeaderComponent } from "../../components/HeaderComponent";
+import { FooterComponent } from "../../components/FooterComponent"
+>>>>>>> Stashed changes
 export const Home = () => {
   const navigate = useNavigate();
   return (
@@ -53,11 +58,16 @@ export const Home = () => {
         <S.FolhasImg src={Folhas} />
         <h1>Espaço do card</h1>
       </S.CardSpace>
+<<<<<<< Updated upstream
       <S.Footer>
         <S.LogoFooter src = {LogoNatureDark} />
         <S.TitleLogoFooter> NATURAL FUTURE TICKET</S.TitleLogoFooter>
 
       </S.Footer>
+=======
+      <FooterComponent />
+>>>>>>> Stashed changes
     </S.MainBackground>
+    
   );
 };

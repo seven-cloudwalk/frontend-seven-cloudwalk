@@ -10,6 +10,7 @@ export const constants = {
   textColorHeaderAndLogo: "#014034",
   textColorCards: "#014034",
   textButtonsAndFooter: "#ffff",
+<<<<<<< Updated upstream
 
   fontFamilyLogoFooter: "intro_rust_gbase_2_line",
   fontSizeLogoFooter: "2rem",
@@ -19,4 +20,9 @@ export const constants = {
   fontSizeTextFooter: "18px",
   fontWeigthTextFooter: "medium",
 
+=======
+  
+  fontSizeLogoFooter: "2.5rem",
+  fontSizeItensFooter:"14px",
+>>>>>>> Stashed changes
 };
