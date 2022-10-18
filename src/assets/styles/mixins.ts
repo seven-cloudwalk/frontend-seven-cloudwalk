@@ -304,19 +304,20 @@ const OptionsBtnCard = () => css`
     transform: scale(1.09);
   }
 `;
-const LogoFooter = () => css`
-  width: 280px;
-  height: 280px;
-  margin-right: -1rem;
-  cursor: pointer;
-`;
 
-export const Footer = () => css`
-  width: 100%;
-  height:300px;
-  color: ${colors.footerTextColor};
-  background-color: ${colors.footerColor};
-`
+// const LogoFooter = () => css`
+//   width: 280px;
+//   height: 280px;
+//   margin-right: -1rem;
+//   cursor: pointer;
+// `;
+
+// export const Footer = () => css`
+//   width: 100%;
+//   height:300px;
+//   color: ${colors.footerTextColor};
+//   background-color: ${colors.footerColor};
+// `
 export const TitleFooter = () => css`
  color: ${colors.footerTextColor};
  font-family: ${constants.fontFamilyLogoFooter};
@@ -325,25 +326,29 @@ export const TitleFooter = () => css`
 export const TitleLogoFooter = () => css`
  color: ${colors.footerTextColor};
  font-family: ${constants.fontFamilyLogoFooter};
- font-size: ${constants.fontSizeLogoFooter}
+ font-size: ${constants.fontSizeLogoFooter};
+ `;
 
 const Footer = () => css`
   width: 100%;
   height: 220px;
   background-color: ${colors.footerColor};
   display: inline-grid;
-  grid-template-column: auto auto auto auto auto;
-  justify-content: space-evenly;
+  /* grid-template-column: auto auto auto auto auto; */
+  justify-content: center;
   align-content: center;
-  
+  gap: 5rem;
+  margin-top: 15rem;
 `;
+
 const LogoFooter = () => css`
   width:200px;
   height: 200px;
   grid-column: 1;
   align-self:center;
 `;
-const nameLogoFooter =() => css`
+
+const nameLogoFooter = () => css`
   font-family:${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeLogoFooter};
   color: ${colors.colorLogoFooter};
@@ -352,13 +357,17 @@ const nameLogoFooter =() => css`
   align-self:center;
   padding-right:15px;
   border-right:3px solid white;
+  margin-left: -5rem;
+  margin-right: 5rem;
 `;
+
 const titleFooter= () => css`
   font-family:${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
   grid-column:3;
   padding-top:20px;
+  cursor: pointer;
 `;
 const titleFooter2= () => css`
   font-family:${constants.fontFamilyLogoHeader};
@@ -366,6 +375,7 @@ const titleFooter2= () => css`
   color: ${colors.colorLogoFooter};
   grid-column:4;
   padding-top:20px;
+  cursor: pointer;
 `;
 const titleFooter3= () => css`
   font-family:${constants.fontFamilyLogoHeader};
@@ -373,7 +383,9 @@ const titleFooter3= () => css`
   color: ${colors.colorLogoFooter};
   grid-column:5;
   padding-top:20px;
+  cursor: pointer;
 `;
+
 const itemFooter =() => css`
   text-decoration: none;
   color: ${colors.colorLogoFooter};
@@ -399,15 +411,11 @@ export const mixins = {
   TitleLogoFooter,
   CardLoginPage,
   BtnLoginPage,
-  Footer,
-  LogoFooter,
   nameLogoFooter,
   titleFooter,
   titleFooter2,
   titleFooter3,
   itemFooter,
-  CardLoginPage,
-  BtnLoginPage,
   CardRegisterUserPage,
   BtnRegisterUserPage,
   BtnLogout,

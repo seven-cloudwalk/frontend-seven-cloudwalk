@@ -1,6 +1,7 @@
 import React from "react";
 import { CgBorderStyleSolid } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
+import LogoNatureDark from "../../assets/Icons/LogoNatureFuture.png"
 import LogoNature2 from "../../assets/Icons/nature_future_ticket_1.png";
 import * as S from "./style";
 
@@ -10,7 +11,7 @@ export const FooterComponent = () => {
         <S.Footer className="grid-container">
             <S.LogoFooter 
                 className= "grid-item"
-                src={LogoNature2}
+                src={LogoNatureDark}
                 alt="logo Nature Future Ticket"
                 onClick={() => navigate("/")}
             />

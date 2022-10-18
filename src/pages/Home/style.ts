@@ -41,19 +41,20 @@ export const Divisors = styled.div`
 `;
 
 export const Footer = styled.footer`
-${({ theme }) => css`
+  ${({ theme }) => css`
     ${theme.mixins.Footer}
-    `}
+  `}
 `;
 export const TitleLogoFooter = styled.p`
-${({ theme }) => css`
+  ${({ theme }) => css`
     ${theme.mixins.TitleLogoFooter}
-    `}
+  `}
 `;
 export const LogoFooter = styled.img`
-${({ theme }) => css`
+  ${({ theme }) => css`
     ${theme.mixins.LogoFooter}
-    `}
+  `}
+`;
 
 export const SpaceCards = styled.div`
   ${({ theme }) => css`
