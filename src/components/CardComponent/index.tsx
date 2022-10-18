@@ -1,7 +1,8 @@
-import StarRatingComponent from "react-star-rating-component";
-import * as S from "./style";
-import trees from "../../assets/Images/pngegg.png";
 import { Trees } from "../../mocks/tres";
+import EditLogo from "../../assets/Icons/editIcon.png";
+import StarRatingComponent from "react-star-rating-component";
+import trees from "../../assets/Images/pngegg.png";
+import * as S from "./style";
 
 export const CardComponent = () => {
   return (
@@ -12,9 +13,7 @@ export const CardComponent = () => {
             <S.InfoProduct className="infoProduct">
               <S.LeftSide>
                 <S.NameProduct>{tree.name}</S.NameProduct>
-                <S.DescriptionProduct>
-                  {tree.description}
-                </S.DescriptionProduct>
+                <S.DescriptionProduct>{tree.description}</S.DescriptionProduct>
 
                 <StarRatingComponent
                   name="Rating"
@@ -32,6 +31,7 @@ export const CardComponent = () => {
 
             <S.PriceBtnBuy>
               <S.PriceProduct>R$ {tree.price},00</S.PriceProduct>
+              <S.OptionsBtn src={EditLogo} />
               <S.BtnBuyProduct type="submit">COMPRAR</S.BtnBuyProduct>
             </S.PriceBtnBuy>
           </>

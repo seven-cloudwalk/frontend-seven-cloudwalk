@@ -28,10 +28,11 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    getUserLogged();
     const jwt = localStorage.getItem("jwt");
     if (!jwt) {
       console.log("Sem informações do usuario logado");
+    } else {
+      getUserLogged();
     }
   }, []);
 

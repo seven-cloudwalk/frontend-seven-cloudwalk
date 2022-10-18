@@ -13,11 +13,11 @@ export const SpaceCard = styled.section`
   gap: 5rem;
   margin-top: 1.5rem;
   ::-webkit-scrollbar {
-    width: .6rem;
+    width: 0.6rem;
   }
   ::-webkit-scrollbar-thumb {
     background: #04bf5592;
-  border-radius: 2rem;
+    border-radius: 2rem;
   }
   ::-webkit-scrollbar-track {
     background-color: #f4f4f4;
@@ -89,5 +89,11 @@ export const PriceProduct = styled.p`
 export const BtnBuyProduct = styled.button`
   ${({ theme }) => css`
     ${theme.mixins.BtnBuyProduct}
+  `}
+`;
+
+export const OptionsBtn = styled.img`
+  ${({ theme }) => css`
+    ${theme.mixins.OptionsBtnCard}
   `}
 `;

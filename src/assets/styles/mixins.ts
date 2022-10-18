@@ -12,6 +12,8 @@ const CardSpace = () => css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
   gap: 5rem;
   background: #e6ffef;
   width: 100%;
@@ -121,10 +123,10 @@ const CadLogin = () => css`
 const Folhas = () => css`
   /* position: inherit; */
   /* bottom: 0rem; */
-  margin-top: -60rem;
+  margin-top: -55rem;
   width: 100%;
   height: 100%;
-  background: url(../Images/folhas.png);
+  background-image: url(../Images/folhas.png);
   /* background-position: center center; */
   background-attachment: local;
   background-repeat: repeat;
@@ -225,8 +227,6 @@ const BtnLogout = () => css`
 `;
 
 const CardProduct = () => css`
-  /* position: absolute;
-  top: 20rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -294,6 +294,17 @@ const BtnBuyProduct = () => css`
   }
 `;
 
+const OptionsBtnCard = () => css`
+  width: 2rem;
+  height: 1.9rem;
+  margin-left: 1.2rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.09);
+  }
+`;
+
 export const mixins = {
   Header,
   LogoHeader,
@@ -317,4 +328,5 @@ export const mixins = {
   ImgProduct,
   DivPriceBtnBuy,
   BtnBuyProduct,
+  OptionsBtnCard
 };
