@@ -12,8 +12,22 @@ body,
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: #e6ffef;
+  
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #04bf5592;
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
 }
 
 .um {
   background-color: rgb(255, 255, 255);
 }
+

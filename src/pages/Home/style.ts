@@ -39,3 +39,14 @@ export const Divisors = styled.div`
   /* height: .1px; */
   border: 2px solid #014034;
 `;
+
+export const SpaceCards = styled.div`
+  ${({ theme }) => css`
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-y: scroll; */
+  `}
+`;
