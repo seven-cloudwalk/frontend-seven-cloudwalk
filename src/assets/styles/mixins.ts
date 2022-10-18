@@ -9,9 +9,13 @@ const MainBackground = () => css`
 `;
 
 const CardSpace = () => css`
-  background-color: #e6ffef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  background: #e6ffef;
   width: 100%;
-  height: 100%;
+  height: 80%;
 `;
 
 const Header = () => css`
@@ -115,12 +119,16 @@ const CadLogin = () => css`
 `;
 
 const Folhas = () => css`
+  /* position: inherit; */
+  /* bottom: 0rem; */
+  margin-top: -60rem;
   width: 100%;
   height: 100%;
   background: url(../Images/folhas.png);
-  background-attachment: scroll;
-  background-repeat: round;
-  background-size: auto;
+  /* background-position: center center; */
+  background-attachment: local;
+  background-repeat: repeat;
+  background-size: cover;
 `;
 
 const CardLoginPage = () => css`
@@ -217,6 +225,8 @@ const BtnLogout = () => css`
 `;
 
 const CardProduct = () => css`
+  /* position: absolute;
+  top: 20rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,6 +236,7 @@ const CardProduct = () => css`
   background-color: white;
   padding: 1rem;
   box-sizing: border-box;
+  margin-top: 1.2rem;
   gap: 4rem;
   -webkit-box-shadow: 0px 11px 11px 4px rgba(0, 0, 0, 0.51);
   box-shadow: 0px 11px 11px 4px rgba(0, 0, 0, 0.53);
@@ -262,26 +273,26 @@ const DivPriceBtnBuy = () => css`
 
 const BtnBuyProduct = () => css`
   display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 8rem;
-    height: 2rem;
-    border: none;
-    border-radius: 0.3rem;
-    box-sizing: border-box;
-    color: #000;
-    font-weight: bold;
-    background-color: ${colors.buttonColor};
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
-    box-sizing: border-box;
-    :hover {
-      color: #fff;
-      background-color: ${colors.hoverHeaderColor};
-      -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
-      box-shadow: 0px 0px 6px 0px #04bf55;
-    }
-`
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  color: #000;
+  font-weight: bold;
+  background-color: ${colors.buttonColor};
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  :hover {
+    color: #fff;
+    background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+  }
+`;
 
 export const mixins = {
   Header,
@@ -305,5 +316,5 @@ export const mixins = {
   InfoProduct,
   ImgProduct,
   DivPriceBtnBuy,
-  BtnBuyProduct
+  BtnBuyProduct,
 };

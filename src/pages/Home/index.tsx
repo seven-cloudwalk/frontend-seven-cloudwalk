@@ -25,8 +25,6 @@ export const Home = () => {
     const response = await LoginService.loggedUser();
     setUserLogged(response.data);
     console.log(response);
-
-    // setUserLogged(response.data.user)
   };
 
   useEffect(() => {
@@ -49,8 +47,11 @@ export const Home = () => {
           <S.Divisors />
         </S.TitleSpace>
 
+        <S.SpaceCards>
+          <CardComponent />
+        </S.SpaceCards>
+
         <S.FolhasImg src={Folhas} />
-        <CardComponent />
       </S.CardSpace>
     </S.MainBackground>
   );
