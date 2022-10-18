@@ -90,7 +90,7 @@ const TitleOptionsHeader = () => css`
   font-family: ${constants.fontFamilyHeader};
   font-size: ${constants.fontSizeHeader};
   font-weight: ${constants.fontWeigthHeader};
-  padding: .2rem;
+  padding: 0.2rem;
   border: 2px solid transparent;
   border-top: none;
   border-right: none;
@@ -99,7 +99,7 @@ const TitleOptionsHeader = () => css`
   cursor: pointer;
   :hover {
     border-bottom-color: ${colors.hoverHeaderColor};
-    padding: .2rem;
+    padding: 0.2rem;
   }
   :focus {
     border-bottom-color: ${colors.hoverHeaderColor};
@@ -208,13 +208,80 @@ const BtnLogout = () => css`
   border-top: none;
   border-right: none;
   border-left: none;
-  padding: .2rem;
+  padding: 0.2rem;
   cursor: pointer;
   :hover {
-    padding: .2rem;
+    padding: 0.2rem;
     border-bottom-color: ${colors.hoverHeaderColor};
   }
 `;
+
+const CardProduct = () => css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 11rem;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 4rem;
+  -webkit-box-shadow: 0px 11px 11px 4px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 11px 11px 4px rgba(0, 0, 0, 0.53);
+`;
+
+const InfoProduct = () => css`
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: -1.5rem;
+  margin-bottom: -0.3rem;
+  line-height: 1.3rem;
+  /* gap: -1rem; */
+`;
+
+const ImgProduct = () => css`
+  position: relative;
+  bottom: 3rem;
+  right: 1rem;
+  width: 13.3rem;
+  height: 11rem;
+`;
+
+const DivPriceBtnBuy = () => css`
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -0.4rem;
+`;
+
+const BtnBuyProduct = () => css`
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    color: #000;
+    font-weight: bold;
+    background-color: ${colors.buttonColor};
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+    :hover {
+      color: #fff;
+      background-color: ${colors.hoverHeaderColor};
+      -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+      box-shadow: 0px 0px 6px 0px #04bf55;
+    }
+`
 
 export const mixins = {
   Header,
@@ -234,4 +301,9 @@ export const mixins = {
   CardRegisterUserPage,
   BtnRegisterUserPage,
   BtnLogout,
+  CardProduct,
+  InfoProduct,
+  ImgProduct,
+  DivPriceBtnBuy,
+  BtnBuyProduct
 };

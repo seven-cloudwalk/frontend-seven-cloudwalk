@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-star-rating-component": "^1.4.1",
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.0",
+    "react-star-rating-component": "^1.4.1",
     "react-toastify": "^9.0.8",
     "styled-components": "^5.3.5",
     "swiper": "^8.4.2"
