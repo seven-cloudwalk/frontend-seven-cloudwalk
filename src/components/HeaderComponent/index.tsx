@@ -22,6 +22,7 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
 
   const LogoutBtn = () => {
     localStorage.clear();
+    window.location.reload();
     navigate("/")
   };
 

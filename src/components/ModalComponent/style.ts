@@ -14,8 +14,8 @@ export const SpaceModal = styled.section`
 export const TitleModal = styled.h1`
   ${({ theme }) => css`
     position: absolute;
-    top: 15.5rem;
-    left: 45.5rem;
+    top: 14rem;
+    left: 46.2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
     color: #014034;
   `}
@@ -31,11 +31,11 @@ export const Modal = styled.div`
     justify-content: space-around;
     background-color: #c2f2dc;
     width: 40rem;
-    height: 25rem;
+    height: 27rem;
     border-radius: 0.5rem;
     gap: 5rem;
-    -webkit-box-shadow: 0px 7px 18px 2px rgba(0,0,0,0.94); 
-    box-shadow: 0px 7px 18px 2px rgba(0,0,0,0.94);
+    -webkit-box-shadow: 0px 7px 18px 2px rgba(0, 0, 0, 0.94);
+    box-shadow: 0px 7px 18px 2px rgba(0, 0, 0, 0.94);
   `}
 `;
 
@@ -44,9 +44,20 @@ export const FormModal = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     width: 60%;
     height: 100%;
     margin-bottom: 1rem;
+  `}
+`;
+
+export const TitleFormModal = styled.h1`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 17rem;
+    left: 51.5rem;
+    color: #014034;
+    font-size: 1.2rem;
   `}
 `;
 
@@ -67,6 +78,7 @@ export const InputModal = styled.input`
     font-size: 1.02rem;
     border: 2px solid transparent;
     border-bottom-color: ${theme.colors.hoverHeaderColor};
+    /* border-right-color: ${theme.colors.hoverHeaderColor}; */
     outline: 0;
     transition: all 0.3s ease-in-out;
     color: #014034;
@@ -75,14 +87,14 @@ export const InputModal = styled.input`
     box-sizing: border-box;
     margin-bottom: 0.5rem;
     :focus {
-      background: none;
+      background-color: #04bf551e;
       border-bottom: 2.5px solid #fff;
       padding: 0.1rem;
       box-sizing: border-box;
     }
     ::placeholder {
-      color: #8e8e8e;
-      font-size: 0.8rem;
+      color: #575757cb;
+      font-size: 0.85rem;
     }
   `}
 `;
@@ -95,6 +107,7 @@ export const LabelModal = styled.label`
     color: #014034;
     box-sizing: border-box;
     margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
   `}
 `;
 
@@ -103,7 +116,6 @@ export const OptionsModal = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     width: 40%;
     height: 100%;
     margin-bottom: 1rem;
@@ -200,7 +212,7 @@ export const CloseBtnModal = styled.p`
     color: #014034;
     font-size: 1.2rem;
     font-weight: bold;
-    top: 15.5rem;
+    top: 14rem;
     left: 74rem;
     cursor: pointer;
     :hover {

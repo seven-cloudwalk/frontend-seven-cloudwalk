@@ -60,7 +60,7 @@ export const NameProduct = styled.h1`
 
 export const DescriptionProduct = styled.p`
   ${({ theme }) => css`
-    margin-top: -0.5rem;
+    margin-top: -1.4rem;
     margin-bottom: -0rem;
     font-size: ${theme.constants.fontSizeInfoCardProduct};
   `}

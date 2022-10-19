@@ -248,8 +248,8 @@ const InfoProduct = () => css`
   height: 50%;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: -1.5rem;
-  margin-bottom: -0.3rem;
+  margin-top: -2.2rem;
+  margin-bottom: 0.4rem;
   line-height: 1.3rem;
   /* gap: -1rem; */
 `;
@@ -297,7 +297,7 @@ const BtnBuyProduct = () => css`
 const OptionsBtnCard = () => css`
   width: 2rem;
   height: 1.9rem;
-  margin-left: 1.2rem;
+  margin-left: 2rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   :hover {

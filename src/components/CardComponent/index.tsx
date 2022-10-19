@@ -1,22 +1,29 @@
-import { Trees } from "../../mocks/tres";
 import { useEffect, useState } from "react";
-import { createUserType } from "../../types/types";
+import { createUserType, productType } from "../../types/types";
+import { ModalComponent } from "../ModalComponent";
 import Modal from "react-modal";
 import EditLogo from "../../assets/Icons/editIcon.png";
-import StarRatingComponent from "react-star-rating-component";
-import trees from "../../assets/Images/pngegg.png";
+import productService from "../../services/productService";
 import * as S from "./style";
-import { ModalComponent } from "../ModalComponent";
 
 export const CardComponent = (props: { loggedUser: createUserType }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState<boolean | any>(false);
+  const [products, setProducts] = useState<productType[]>([]);
+  const [productId, setProductId] = useState<string | any>("");
+
   const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
+    getAllProductsData();
     if (jwt) {
       props.loggedUser;
     }
   }, []);
+
+  const getAllProductsData = async () => {
+    const response = await productService.getAllProducts();
+    setProducts(response.data);
+  };
 
   function openModal() {
     setIsOpen(true);
@@ -26,41 +33,35 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
     setIsOpen(false);
   }
 
-  const customStyle = {
-    position: "absolute",
-    backgroundColor: "transparent",
-    with: "10px",
-  };
-
   return (
     <>
       <S.SpaceCard>
-        {Trees.map((tree) => (
+        {products.map((tree) => (
           <>
-            <S.CardProduct key={tree.cod}>
-              <S.InfoProduct className="infoProduct">
+            <S.CardProduct key={tree.id} onClick={() => setProductId(tree.id)}>
+              <S.InfoProduct>
                 <S.LeftSide>
                   <S.NameProduct>{tree.name}</S.NameProduct>
                   <S.DescriptionProduct>
                     {tree.description}
                   </S.DescriptionProduct>
 
-                  <StarRatingComponent
+                  {/* <StarRatingComponent
                     name="Rating"
                     value={5}
                     starCount={5}
                     starColor={"#04bf55"}
                     editing={false}
-                  />
+                  /> */}
                 </S.LeftSide>
 
                 <S.RightSide>
-                  <S.ImgProduct src={trees} alt="arvore" />
+                  <S.ImgProduct src={tree.image} alt="Ilustração da arvore" />
                 </S.RightSide>
               </S.InfoProduct>
 
               <S.PriceBtnBuy>
-                <S.PriceProduct>R$ {tree.price},00</S.PriceProduct>
+                <S.PriceProduct>R$ {tree.price}</S.PriceProduct>
                 {props.loggedUser.roleAdmin === true ? (
                   <S.OptionsBtn onClick={openModal} src={EditLogo} />
                 ) : (
@@ -73,16 +74,22 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
             <Modal
               isOpen={modalIsOpen}
               onRequestClose={closeModal}
-              style={{ content: { 
-                border: 'none',
-                backgroundColor: 'transparent',
-              },
-              overlay: {
-                border: 'none',
-                backgroundColor: '#00000024',
-              }, }}
+              style={{
+                content: {
+                  border: "none",
+                  backgroundColor: "transparent",
+                },
+                overlay: {
+                  border: "none",
+                  backgroundColor: "#00000056",
+                },
+              }}
             >
-              <ModalComponent closeModal={closeModal} />
+              <ModalComponent
+                treeData={tree}
+                productID={productId}
+                closeModal={closeModal}
+              />
             </Modal>
           </>
         ))}
