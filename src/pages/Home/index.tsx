@@ -52,10 +52,10 @@ export const Home = () => {
         </S.TitleSpace>
 
         <S.SpaceCards>
-          <CardComponent />
+          <CardComponent loggedUser={userLogged}/>
         </S.SpaceCards>
 
-        <S.FolhasImg src={Folhas} />
+        <S.FolhasImg  src={Folhas} />
       </S.CardSpace>
 
       {/* <S.Footer>

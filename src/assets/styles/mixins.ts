@@ -378,6 +378,7 @@ const titleFooter2= () => css`
   cursor: pointer;
 `;
 const titleFooter3= () => css`
+  /* text-align: start; */
   font-family:${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
@@ -391,6 +392,7 @@ const itemFooter =() => css`
   color: ${colors.colorLogoFooter};
   font-size: ${constants.fontSizeItensFooter};
   font-family: ${constants.fontFamilyHeader};
+  margin-left: 1rem;
 `
 
 export const mixins = {
