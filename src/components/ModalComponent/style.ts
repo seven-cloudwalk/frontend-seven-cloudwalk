@@ -14,7 +14,7 @@ export const SpaceModal = styled.section`
 export const TitleModal = styled.h1`
   ${({ theme }) => css`
     position: absolute;
-    top: 14rem;
+    top: 12.5rem;
     left: 46.2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
     color: #014034;
@@ -31,7 +31,7 @@ export const Modal = styled.div`
     justify-content: space-around;
     background-color: #c2f2dc;
     width: 40rem;
-    height: 27rem;
+    height: 30rem;
     border-radius: 0.5rem;
     gap: 5rem;
     -webkit-box-shadow: 0px 7px 18px 2px rgba(0, 0, 0, 0.94);
@@ -54,7 +54,7 @@ export const FormModal = styled.form`
 export const TitleFormModal = styled.h1`
   ${({ theme }) => css`
     position: absolute;
-    top: 17rem;
+    top: 15rem;
     left: 51.5rem;
     color: #014034;
     font-size: 1.2rem;
@@ -116,6 +116,7 @@ export const OptionsModal = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     width: 40%;
     height: 100%;
     margin-bottom: 1rem;
@@ -200,7 +201,8 @@ export const BtnModalDelete = styled.button`
 
 export const LogoModal = styled.img`
   ${({ theme }) => css`
-    width: 14rem;
+    width: 16rem;
+    height: 17rem;
     /* margin-top: 1rem; */
   `}
 `;
@@ -212,7 +214,7 @@ export const CloseBtnModal = styled.p`
     color: #014034;
     font-size: 1.2rem;
     font-weight: bold;
-    top: 14rem;
+    top: 12.5rem;
     left: 74rem;
     cursor: pointer;
     :hover {

@@ -14,10 +14,8 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
   const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
+    props.loggedUser;
     getAllProductsData();
-    if (jwt) {
-      props.loggedUser;
-    }
   }, []);
 
   const getAllProductsData = async () => {

@@ -20,9 +20,9 @@ export const LoadingCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #c2f2dc;
-    height: 25rem;
-    width: 38rem;
+    background-color: ${theme.colors.searchColor};
+    height: 28rem;
+    width: 39rem;
     border-radius: 0.5rem;
   `}
 `;
