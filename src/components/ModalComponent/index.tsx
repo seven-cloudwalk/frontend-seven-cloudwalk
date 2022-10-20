@@ -126,7 +126,7 @@ export const ModalComponent = (props: {
       toast.success("Semente renovada!");
       setTimeout(() => {
         window.location.reload();
-      }, 100);
+      }, 2000);
     } else {
       toast.error(`${updateProduct.data.message}`);
     }
@@ -138,7 +138,7 @@ export const ModalComponent = (props: {
       toast.success("Semente removida com sucesso!");
       setTimeout(() => {
         window.location.reload();
-      }, 100);
+      }, 2000);
     } else {
       toast.error(`${deleteProduct.data.message}`);
     }
