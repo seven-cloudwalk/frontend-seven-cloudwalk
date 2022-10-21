@@ -6,12 +6,6 @@ export const MainBackground = styled.section`
   `}
 `;
 
-export const CardSpace = styled.div`
-  ${({ theme }) => css`
-    ${theme.mixins.CardSpace}
-  `}
-`;
-
 export const FolhasImg = styled.img`
   ${({ theme }) => css`
     ${theme.mixins.Folhas}
@@ -23,8 +17,8 @@ export const TitleSpace = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: -3rem;
+  margin-top: 2.5rem;
+  margin-bottom: -5rem;
 `;
 
 export const TitleProducts = styled.span`
@@ -55,15 +49,33 @@ export const LogoFooter = styled.img`
     ${theme.mixins.LogoFooter}
   `}
 `;
-
-export const SpaceCards = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    width: 75%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10rem;
-    /* overflow-y: scroll; */
-  `}
+export const TituloAboutUs = styled.h2`
+    ${({ theme }) => css`
+        ${theme.mixins.TituloAboutUs}
+    `}
+`;
+export const TextoAboutUs = styled.p`
+    ${({ theme }) => css`
+        ${theme.mixins.TextoAboutUs}
+    `}
+`;
+export const TimeAboutUs = styled.div`
+    ${({ theme }) => css`
+        ${theme.mixins.TimeAboutUs}
+    `}
+`
+export const FotoDev = styled.img`
+${({ theme }) => css`
+        ${theme.mixins.FotoDev}
+    `}
+`
+export const TituloAboutUsDev = styled.h3`
+    ${({ theme }) => css`
+        ${theme.mixins.TituloAboutUsDev}
+    `}
+`;
+export const TextoAboutUsDev = styled.p`
+    ${({ theme }) => css`
+        ${theme.mixins.TextoAboutUsDev}
+    `}
 `;

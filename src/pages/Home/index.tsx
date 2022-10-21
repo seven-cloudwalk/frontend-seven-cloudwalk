@@ -42,7 +42,9 @@ export const Home = () => {
 
   return (
     <S.MainBackground>
+      
       <HeaderComponent loggedUser={userLogged} />
+      
       <BannerCarousel />
 
       <S.CardSpace>
@@ -57,8 +59,9 @@ export const Home = () => {
         </S.SpaceCards>
 
         <S.FolhasImg  src={Folhas} />
+        <FooterComponent />
       </S.CardSpace>
-      <FooterComponent />
+      
 
     </S.MainBackground>
     

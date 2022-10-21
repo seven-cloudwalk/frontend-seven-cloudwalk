@@ -107,7 +107,7 @@ export const ModalComponent = (props: {
 
   const createProduct = async () => {
     const response = await productService.createProducts(createProducts);
-    if (response.status == 201) {
+    if (response) {
       toast.success("Uma nova semente foi plantada! 🌱🌳");
       setTimeout(() => {
         window.location.reload();
@@ -122,7 +122,7 @@ export const ModalComponent = (props: {
       createProducts,
       productId
     );
-    if (updateProduct.status != 400) {
+    if (updateProduct.status == 200) {
       toast.success("Semente renovada!");
       setTimeout(() => {
         window.location.reload();
