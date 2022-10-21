@@ -59,7 +59,7 @@ export const LogoFooter = styled.img`
 export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: 70%;
+    width: 75%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;

@@ -61,6 +61,7 @@ export const RegisterUserPage = () => {
         </S.headerCardRegister>
 
         <S.InputRegisterField onSubmit={createUser}>
+          
           <S.InputLabelRegister>
             <S.LabelRegister htmlFor="nickname">Nome</S.LabelRegister>
             <S.InputRegister
