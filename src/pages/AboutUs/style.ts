@@ -79,3 +79,13 @@ export const TextoAboutUsDev = styled.p`
         ${theme.mixins.TextoAboutUsDev}
     `}
 `;
+export const LinksDevs = styled.a`
+    ${({ theme }) => css`
+        ${theme.mixins.LinksDevs}
+    `}
+`;
+export const IconRedes = styled.img`
+    ${({ theme }) => css`
+        ${theme.mixins.IconRedes}
+    `}
+`;

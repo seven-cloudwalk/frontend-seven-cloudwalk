@@ -13,7 +13,8 @@ import Jay from "../../assets/Images/jay.jpeg"
 import Keven from "../../assets/Images/keven.jpeg"
 import Elieldo from "../../assets/Images/elieldo.jpg"
 import Karen from "../../assets/Images/FotoKaren.jpg"
-
+import GitHub from "../../assets/Icons/icons8-github-32.png"
+import LinkedIn from "../../assets/Icons/icons8-linkedin-32.png"
 export const AboutUs = () => {
   const [userLogged, setUserLogged] = useState<createUserType>({
     id: "",
@@ -58,7 +59,23 @@ export const AboutUs = () => {
         </S.TituloAboutUs>
         <S.TextoAboutUs>
             A crise ambiental é um dos problemas mais relevantes do século XXI. 
-            Pensando nisso nós da Nature Future Ticket criamos essa iniciativa para resolvermos em conjunto essa questão.
+            Pensando nisso nós da Nature Future Ticket criamos essa iniciativa para resolvermos 
+            em conjunto essa questão.<br/><br/>
+            Nossa proposta é super simples! Nós plantamos a muda financiada por você.
+            Sabemos que nem todos tem o tempo, o espaço ou a habilidade para cuidar de uma árvore
+             mas isso não significa que não estejamos todos preocupados com o futuro do planeta.
+            <br/><br/>Por esse motivo criamos esse ecommerce diferente, para fazer com que todos possam
+            ajudar nessa iniciativa, pessoas e empresas unidas para um meio ambiente mais equilibrado
+            e diverso.
+            <br/><br/>
+            Você sabia que:<br/><br/>- Para começar, uma árvore adulta consegue absorver, em um ano, aproximadamente
+             22 quilos de gás carbônico, e produzir oxigênio suficiente para a respiração de dois 
+             adultos.<br/><br/>
+             - Um hectare de eucalipto produz, por ano, oxigénio para entre 37 a 80 pessoas.<br/><br/>
+             - São necessárias 22 árvores para fornecer oxigénio a uma pessoa. <br/><br/><br/>
+
+            Não adianta apenas falar sobre o assunto, temos que agir também, apoie nossa causa!<br/>
+
         </S.TextoAboutUs>
         <S.TituloAboutUs>
             Nosso time
@@ -78,8 +95,21 @@ export const AboutUs = () => {
             correr atrás... Hoje sou um entusiasta da tecnologia, me orgulho da decisão que 
             tomei em relação ao curso e posso dizer: hoje, eu sou feliz!<br/>
             Com tudo isso, esqueci do meu sonho de criança e vivo intensamente o meu sonho 
-            de adulto!
+            de adulto!<br/><br/>
+            <S.LinksDevs
+            href="https://www.linkedin.com/in/jaymesonmendes/"
+            target="_blank">
+                <S.IconRedes
+                src={LinkedIn}/> LinkedIn
+            </S.LinksDevs>
+            <S.LinksDevs
+            href="https://github.com/jayymeson"
+            target="_blank">
+                <S.IconRedes
+                src={GitHub}/> GitHub
+            </S.LinksDevs>
             </S.TextoAboutUsDev>
+            
         </S.TimeAboutUs>
         <S.TimeAboutUs>
         <S.FotoDev
@@ -94,19 +124,45 @@ export const AboutUs = () => {
             Se a época da Inquisição fosse hoje, com certeza estaríamos condenados. 
             Algumas linhas de código, diversos arquivos, e scripts, conseguimos criar um 
             universo inteiro, ou melhor, um Metaverso".<br/> Que todos nós nos tornemos magos 
-            implacáveis!
+            implacáveis!<br/><br/>
+                <S.LinksDevs
+                href="https://www.linkedin.com/in/keven-ferreira-moraes-4327a463/"
+                target="_blank">
+                    <S.IconRedes
+                    src={LinkedIn}/> LinkedIn
+                </S.LinksDevs>
+                <S.LinksDevs
+                href="https://github.com/Kevenfz"
+                target="_blank">
+                    <S.IconRedes
+                    src={GitHub}/> GitHub
+                </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
+
         <S.TimeAboutUs>
             <S.FotoDev src={Elieldo}/>
             
             <S.TextoAboutUsDev>
-            <S.TituloAboutUsDev>Elieldo Martins</S.TituloAboutUsDev>
-            Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
-            Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
-            dimensões.<br/><br/><br/>
+                <S.TituloAboutUsDev>Elieldo Martins</S.TituloAboutUsDev>
+                Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
+                Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
+                dimensões.<br/><br/><br/><br/>
+                <S.LinksDevs
+                href="https://www.linkedin.com/in/elieldo-martins-05839673/"
+                target="_blank">
+                    <S.IconRedes
+                    src={LinkedIn}/> LinkedIn
+                </S.LinksDevs>
+                <S.LinksDevs
+                href="https://github.com/hefi1413"
+                target="_blank">
+                    <S.IconRedes
+                    src={GitHub}/> GitHub
+                </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
+
         <S.TimeAboutUs>
         <S.FotoDev src={Karen}/>
             <S.TextoAboutUsDev>
@@ -114,7 +170,19 @@ export const AboutUs = () => {
             Olá, sou Karen Lourenço, uma desenvolvedora full-stack e entusiasta do design de UI e UX.
             
             No momento estou cursando engenharia da computação na Faculdade Descomplica e sou aluna da Blue Edtech.
-           <br/> Estou sempre disposta a novos desafios!
+           <br/> Estou sempre disposta a novos desafios!<br/><br/>
+            <S.LinksDevs
+            href="https://www.linkedin.com/in/karenlourenco/"
+            target="_blank">
+                <S.IconRedes
+                src={LinkedIn}/> LinkedIn
+            </S.LinksDevs>
+            <S.LinksDevs
+            href ="https://github.com/KarenMascarenhasLourenco"
+            target="_blank">
+                <S.IconRedes
+                src={GitHub}/> GitHub
+            </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
       {/* <S.Footer>
