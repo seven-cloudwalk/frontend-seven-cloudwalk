@@ -342,7 +342,7 @@ const Footer = () => css`
   justify-content: center;
   align-content: center;
   gap: 5rem;
-  margin-top: 22rem;
+  margin-top: 56rem;
 `;
 
 const LogoFooter = () => css`
