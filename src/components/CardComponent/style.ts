@@ -13,7 +13,7 @@ export const SpaceCard = styled.section`
   gap: 5rem;
   margin-top: 1.5rem;
   ::-webkit-scrollbar {
-    width: 0.6rem;
+    width: 0.4rem;
   }
   ::-webkit-scrollbar-thumb {
     background: #04bf5592;
@@ -60,7 +60,7 @@ export const NameProduct = styled.h1`
 
 export const DescriptionProduct = styled.p`
   ${({ theme }) => css`
-    margin-top: -0.5rem;
+    margin-top: -1.4rem;
     margin-bottom: -0rem;
     font-size: ${theme.constants.fontSizeInfoCardProduct};
   `}

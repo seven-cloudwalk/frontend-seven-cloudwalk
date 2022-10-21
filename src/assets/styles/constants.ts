@@ -2,8 +2,8 @@ export const constants = {
   fontFamilyHeader: "Poppins",
   fontSizeHeader: "18px",
   fontSizeCardLogin: "1.85rem",
-  fontSizeCardProduct: "1.35rem",
-  fontSizeInfoCardProduct: "1.05rem",
+  fontSizeCardProduct: "1.30rem",
+  fontSizeInfoCardProduct: "1rem",
   fontSizeBtnCardLogin: "1.5rem",
   fontWeigthHeader: "semi-bold",
 
