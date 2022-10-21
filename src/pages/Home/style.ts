@@ -63,6 +63,7 @@ export const SpaceCards = styled.div`
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10rem;
     /* overflow-y: scroll; */
   `}
 `;

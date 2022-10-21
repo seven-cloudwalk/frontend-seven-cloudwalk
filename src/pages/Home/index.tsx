@@ -59,9 +59,9 @@ export const Home = () => {
         </S.SpaceCards>
 
         <S.FolhasImg  src={Folhas} />
+        <FooterComponent />
       </S.CardSpace>
       
-      <FooterComponent />
 
     </S.MainBackground>
     

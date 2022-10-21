@@ -5,7 +5,11 @@ import { constants } from "./constants";
 const MainBackground = () => css`
   width: 100%;
   height: 100%;
-  background-color: #e6ffef;
+  /* background-image: url(../Images/folhas.png);
+  background-position: center center;
+  background-attachment: local;
+  background-repeat: repeat;
+  background-size: cover; */
 `;
 
 const CardSpace = () => css`
@@ -330,7 +334,7 @@ export const TitleLogoFooter = () => css`
 `;
 
 const Footer = () => css`
-  width: 100%;
+  width: 100vw;
   height: 220px;
   background-color: ${colors.footerColor};
   display: flex;
@@ -338,6 +342,7 @@ const Footer = () => css`
   justify-content: center;
   align-content: center;
   gap: 5rem;
+  margin-top: 22rem;
 `;
 
 const LogoFooter = () => css`
