@@ -64,6 +64,7 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
             </S.TitleOptionsHeader>
           </S.CadLogin>
         </S.OptionsHeader>
+        
       </S.LogoSearchHeader>
     </S.Header>
   );

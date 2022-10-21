@@ -45,6 +45,7 @@ const nameLogoHeader = () => css`
 `;
 
 const titleLogoHeader = () => css`
+  margin-top: 1rem;
   font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeTitleProducts};
   color: ${colors.textLogoColor};
@@ -85,11 +86,11 @@ const BtnSearch = () => css`
 const OptionsHeader = () => css`
   position: absolute;
   display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  left: 85rem;
-  width: 100%;
-  gap: 2.7rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-left: 15rem;
+  width: 85%;
+  gap: 2.8rem;
 `;
 
 const TitleOptionsHeader = () => css`
@@ -113,10 +114,9 @@ const TitleOptionsHeader = () => css`
 `;
 
 const CadLogin = () => css`
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   align-items: center;
-  right: 89rem;
   gap: 1rem;
 `;
 
@@ -257,7 +257,7 @@ const InfoProduct = () => css`
 const ImgProduct = () => css`
   position: relative;
   bottom: 2rem;
-  right: .5rem;
+  right: 0.5rem;
   width: 11rem;
   height: 11rem;
 `;
@@ -319,15 +319,15 @@ const OptionsBtnCard = () => css`
 //   background-color: ${colors.footerColor};
 // `
 export const TitleFooter = () => css`
- color: ${colors.footerTextColor};
- font-family: ${constants.fontFamilyLogoFooter};
- font-size: ${constants.fontSizeTitlesFooter};
-`
+  color: ${colors.footerTextColor};
+  font-family: ${constants.fontFamilyLogoFooter};
+  font-size: ${constants.fontSizeTitlesFooter};
+`;
 export const TitleLogoFooter = () => css`
- color: ${colors.footerTextColor};
- font-family: ${constants.fontFamilyLogoFooter};
- font-size: ${constants.fontSizeLogoFooter};
- `;
+  color: ${colors.footerTextColor};
+  font-family: ${constants.fontFamilyLogoFooter};
+  font-size: ${constants.fontSizeLogoFooter};
+`;
 
 const Footer = () => css`
   width: 100%;
@@ -342,99 +342,99 @@ const Footer = () => css`
 `;
 
 const LogoFooter = () => css`
-  width:200px;
+  width: 200px;
   height: 200px;
   grid-column: 1;
-  align-self:center;
+  align-self: center;
 `;
 
 const nameLogoFooter = () => css`
-  font-family:${constants.fontFamilyLogoHeader};
+  font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeLogoFooter};
   color: ${colors.colorLogoFooter};
   text-align: right;
   grid-column: 2;
-  align-self:center;
-  padding-right:15px;
-  border-right:3px solid white;
+  align-self: center;
+  padding-right: 15px;
+  border-right: 3px solid white;
   margin-left: -5rem;
   margin-right: 5rem;
 `;
 
-const titleFooter= () => css`
-  font-family:${constants.fontFamilyLogoHeader};
+const titleFooter = () => css`
+  font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
-  grid-column:3;
-  padding-top:20px;
+  grid-column: 3;
+  padding-top: 20px;
   cursor: pointer;
 `;
-const titleFooter2= () => css`
-  font-family:${constants.fontFamilyLogoHeader};
+const titleFooter2 = () => css`
+  font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
-  grid-column:4;
-  padding-top:20px;
+  grid-column: 4;
+  padding-top: 20px;
   cursor: pointer;
 `;
-const titleFooter3= () => css`
+const titleFooter3 = () => css`
   /* text-align: start; */
-  font-family:${constants.fontFamilyLogoHeader};
+  font-family: ${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
-  grid-column:5;
-  padding-top:20px;
+  grid-column: 5;
+  padding-top: 20px;
   cursor: pointer;
 `;
 
-const itemFooter =() => css`
+const itemFooter = () => css`
   text-decoration: none;
   color: ${colors.colorLogoFooter};
   font-size: ${constants.fontSizeItensFooter};
   font-family: ${constants.fontFamilyHeader};
   margin-left: 1rem;
-`
+`;
 const TituloAboutUs = () => css`
   font-size: ${constants.fontSizeTitlesFooter};
-  font-family:${constants.fontFamilyLogoHeader};
+  font-family: ${constants.fontFamilyLogoHeader};
   padding: 100px 0 0px 100px;
   color: ${colors.textLogoColor};
-`
+`;
 const TextoAboutUs = () => css`
   font-size: ${constants.fontSizeCardLogin};
-  font-family: ${constants.fontFamilyHeader}; 
+  font-family: ${constants.fontFamilyHeader};
   color: ${colors.textLogoColor};
   padding: 0px 100px 0px 100px;
   text-align: justify;
-`
+`;
 const TimeAboutUs = () => css`
-  display:grid;
+  display: grid;
   grid-template-column: auto auto auto auto auto auto auto;
   padding: 0px 100px 50px 100px;
-  align-items:center 
-`
+  align-items: center;
+`;
 const FotoDev = () => css`
-  border-radius:50%;
-  height:200px;
+  border-radius: 50%;
+  height: 200px;
   width: 200px;
   grid-column: 1/2;
   grid-row: auto;
-`
+`;
 const TituloAboutUsDev = () => css`
   font-size: ${constants.fontSizeBtnCardLogin};
-  font-family:${constants.fontFamilyLogoHeader};
-  padding:0px 0 0px 0px;
+  font-family: ${constants.fontFamilyLogoHeader};
+  padding: 0px 0 0px 0px;
   color: ${colors.textLogoColor};
   grid-column: 3/7;
-`
+`;
 const TextoAboutUsDev = () => css`
   font-size: ${constants.fontSizeCardProduct};
-  font-family: ${constants.fontFamilyHeader}; 
+  font-family: ${constants.fontFamilyHeader};
   color: ${colors.textLogoColor};
   padding: 0px 100px 0px 100px;
   text-align: justify;
   grid-column: 3/7;
-`
+`;
 export const mixins = {
   Header,
   LogoHeader,
