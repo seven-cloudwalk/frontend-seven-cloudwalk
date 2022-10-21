@@ -23,8 +23,8 @@ export const TitleSpace = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: -5rem;
+  margin-top: 1rem;
+  margin-bottom: -3rem;
 `;
 
 export const TitleProducts = styled.span`

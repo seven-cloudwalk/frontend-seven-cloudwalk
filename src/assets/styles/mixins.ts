@@ -257,7 +257,7 @@ const InfoProduct = () => css`
 const ImgProduct = () => css`
   position: relative;
   bottom: 2rem;
-  right: -.8rem;
+  right: .5rem;
   width: 11rem;
   height: 11rem;
 `;

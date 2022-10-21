@@ -122,7 +122,7 @@ export const ModalComponent = (props: {
       createProducts,
       productId
     );
-    if (updateProduct.status != 400) {
+    if (updateProduct.status == 200) {
       toast.success("Semente renovada!");
       setTimeout(() => {
         window.location.reload();
