@@ -1,0 +1,36 @@
+.swal-modal {
+  background-color: #014034;
+}
+
+.swal-title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.swal-button {
+  border: none;
+  background-color: #ac0000;
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+}
+
+.swal-button:hover {
+  color: #000;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 6px 0px #ffffff;
+  box-shadow: 0px 0px 6px 0px #ffffff;
+  transform: scale(1.01);
+}
+
+.swal-button--confirm {
+  background-color: #009e45;
+  transition: all 0.4s ease-in-out;
+  margin-top: -0.1rem;
+}
+
+.swal-button--confirm:hover {
+  background-color: #04bf55;
+  -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+  box-shadow: 0px 0px 6px 0px #04bf55;
+  transform: scale(1.01);
+}

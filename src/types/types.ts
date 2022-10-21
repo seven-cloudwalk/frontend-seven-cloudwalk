@@ -21,3 +21,14 @@ export interface userLoggedType {
   createdAt?: string;
   updatedAt?: string;
 }
+
+export interface productType {
+  id?: string;
+  name: string;
+  cod?: number;
+  category: string;
+  description: string;
+  price: number;
+  image: string;
+  stock?: boolean;
+}

@@ -248,17 +248,17 @@ const InfoProduct = () => css`
   height: 50%;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: -1.5rem;
-  margin-bottom: -0.3rem;
+  margin-top: -2.2rem;
+  margin-bottom: 0.4rem;
   line-height: 1.3rem;
   /* gap: -1rem; */
 `;
 
 const ImgProduct = () => css`
   position: relative;
-  bottom: 3rem;
-  right: 1rem;
-  width: 13.3rem;
+  bottom: 2rem;
+  right: .5rem;
+  width: 11rem;
   height: 11rem;
 `;
 
@@ -297,7 +297,7 @@ const BtnBuyProduct = () => css`
 const OptionsBtnCard = () => css`
   width: 2rem;
   height: 1.9rem;
-  margin-left: 1.2rem;
+  margin-left: 2rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   :hover {
@@ -378,7 +378,8 @@ const titleFooter2= () => css`
   cursor: pointer;
 `;
 const titleFooter3= () => css`
-  
+  /* text-align: start; */
+  font-family:${constants.fontFamilyLogoHeader};
   font-size: ${constants.fontSizeHeader};
   color: ${colors.colorLogoFooter};
   grid-column:5;
@@ -391,6 +392,7 @@ const itemFooter =() => css`
   color: ${colors.colorLogoFooter};
   font-size: ${constants.fontSizeItensFooter};
   font-family: ${constants.fontFamilyHeader};
+  margin-left: 1rem;
 `
 const TituloAboutUs = () => css`
   font-size: ${constants.fontSizeTitlesFooter};
