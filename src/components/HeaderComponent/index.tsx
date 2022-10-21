@@ -48,7 +48,9 @@ export const HeaderComponent = (props: { loggedUser: createUserType }) => {
           <S.TitleOptionsHeader onClick={() => navigate("/")}>
             Home
           </S.TitleOptionsHeader>
-          <S.TitleOptionsHeader>Sobre nós</S.TitleOptionsHeader>
+          <S.TitleOptionsHeader onClick={() => navigate("/AboutUs")}>
+            Sobre nós
+          </S.TitleOptionsHeader>
 
           <S.CadLogin>
             <S.TitleOptionsHeader onClick={jwt ? undefined : () => navigate("/login")}>

@@ -394,7 +394,47 @@ const itemFooter =() => css`
   font-family: ${constants.fontFamilyHeader};
   margin-left: 1rem;
 `
-
+const TituloAboutUs = () => css`
+  font-size: ${constants.fontSizeTitlesFooter};
+  font-family:${constants.fontFamilyLogoHeader};
+  padding: 100px 0 0px 100px;
+  color: ${colors.textLogoColor};
+`
+const TextoAboutUs = () => css`
+  font-size: ${constants.fontSizeCardLogin};
+  font-family: ${constants.fontFamilyHeader}; 
+  color: ${colors.textLogoColor};
+  padding: 0px 100px 0px 100px;
+  text-align: justify;
+`
+const TimeAboutUs = () => css`
+  display:grid;
+  grid-template-column: auto auto auto auto auto auto auto;
+  padding: 0px 100px 50px 100px;
+  align-items:center 
+`
+const FotoDev = () => css`
+  border-radius:50%;
+  height:200px;
+  width: 200px;
+  grid-column: 1/2;
+  grid-row: auto;
+`
+const TituloAboutUsDev = () => css`
+  font-size: ${constants.fontSizeBtnCardLogin};
+  font-family:${constants.fontFamilyLogoHeader};
+  padding:0px 0 0px 0px;
+  color: ${colors.textLogoColor};
+  grid-column: 3/7;
+`
+const TextoAboutUsDev = () => css`
+  font-size: ${constants.fontSizeCardProduct};
+  font-family: ${constants.fontFamilyHeader}; 
+  color: ${colors.textLogoColor};
+  padding: 0px 100px 0px 100px;
+  text-align: justify;
+  grid-column: 3/7;
+`
 export const mixins = {
   Header,
   LogoHeader,
@@ -426,5 +466,11 @@ export const mixins = {
   ImgProduct,
   DivPriceBtnBuy,
   BtnBuyProduct,
-  OptionsBtnCard
+  OptionsBtnCard,
+  TituloAboutUs,
+  TextoAboutUs,
+  TimeAboutUs,
+  FotoDev,
+  TituloAboutUsDev,
+  TextoAboutUsDev,
 };
