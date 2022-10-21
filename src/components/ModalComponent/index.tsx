@@ -260,8 +260,6 @@ export const ModalComponent = (props: {
         </S.OptionsModal>
       </S.Modal>
       <S.CloseBtnModal onClick={closeModal}>X</S.CloseBtnModal>
-      {/* <Modal isOpen={modalIsOpen}
-      /> */}
     </S.SpaceModal>
   );
 };

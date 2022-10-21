@@ -38,6 +38,8 @@ export const Home = () => {
     console.log(response);
   };
 
+  //TODO Search nos produtos
+
   return (
     <S.MainBackground>
       <HeaderComponent loggedUser={userLogged} />

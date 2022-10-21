@@ -79,7 +79,7 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
                 },
                 overlay: {
                   border: "none",
-                  backgroundColor: "#00000056",
+                  backgroundColor: "#00000052",
                 },
               }}
             >
