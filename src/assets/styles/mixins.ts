@@ -17,7 +17,7 @@ const CardSpace = () => css`
   gap: 5rem;
   background: #e6ffef;
   width: 100%;
-  height: 80%;
+  height: 100%;
 `;
 
 const Header = () => css`
@@ -333,12 +333,11 @@ const Footer = () => css`
   width: 100%;
   height: 220px;
   background-color: ${colors.footerColor};
-  display: inline-grid;
-  /* grid-template-column: auto auto auto auto auto; */
+  display: flex;
+  grid-template-column: auto auto auto auto auto;
   justify-content: center;
   align-content: center;
   gap: 5rem;
-  margin-top: 15rem;
 `;
 
 const LogoFooter = () => css`
@@ -435,6 +434,20 @@ const TextoAboutUsDev = () => css`
   text-align: justify;
   grid-column: 3/7;
 `;
+
+const LinksDevs = () => css`
+  font-size: ${constants.fontSizeCardProduct};
+  font-family: ${constants.fontFamilyHeader};
+  color: ${colors.textLogoColor};
+  text-decoration: none;
+  padding-right: 80px;
+`;
+
+const IconRedes = () => css`
+  width: 32px;
+  height: 32px;
+`;
+
 export const mixins = {
   Header,
   LogoHeader,
@@ -473,4 +486,6 @@ export const mixins = {
   FotoDev,
   TituloAboutUsDev,
   TextoAboutUsDev,
+  LinksDevs,
+  IconRedes,
 };
