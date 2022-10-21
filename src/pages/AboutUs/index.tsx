@@ -58,7 +58,23 @@ export const AboutUs = () => {
         </S.TituloAboutUs>
         <S.TextoAboutUs>
             A crise ambiental é um dos problemas mais relevantes do século XXI. 
-            Pensando nisso nós da Nature Future Ticket criamos essa iniciativa para resolvermos em conjunto essa questão.
+            Pensando nisso nós da Nature Future Ticket criamos essa iniciativa para resolvermos 
+            em conjunto essa questão.<br/><br/>
+            Nossa proposta é super simples! Nós plantamos a muda financiada por você.
+            Sabemos que nem todos tem o tempo, o espaço ou a habilidade para cuidar de uma árvore
+             mas isso não significa que não estejamos todos preocupados com o futuro do planeta.
+            <br/><br/>Por esse motivo criamos esse ecommerce diferente, para fazer com que todos possam
+            ajudar nessa iniciativa, pessoas e empresas unidas para um meio ambiente mais equilibrado
+            e diverso.
+            <br/><br/>
+            Você sabia que:<br/><br/>- Para começar, uma árvore adulta consegue absorver, em um ano, aproximadamente
+             22 quilos de gás carbônico, e produzir oxigênio suficiente para a respiração de dois 
+             adultos.<br/><br/>
+             - Um hectare de eucalipto produz, por ano, oxigénio para entre 37 a 80 pessoas.<br/><br/>
+             - São necessárias 22 árvores para fornecer oxigénio a uma pessoa. <br/><br/><br/>
+
+            Não adianta apenas falar sobre o assunto, temos que agir também, apoie nossa causa!<br/>
+
         </S.TextoAboutUs>
         <S.TituloAboutUs>
             Nosso time
