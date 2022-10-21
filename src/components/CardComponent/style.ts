@@ -8,8 +8,8 @@ export const SpaceCard = styled.section`
   padding: 2rem;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
   gap: 5rem;
   margin-top: 1.5rem;
   ::-webkit-scrollbar {
