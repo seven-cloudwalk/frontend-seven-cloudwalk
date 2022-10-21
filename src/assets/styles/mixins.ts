@@ -433,6 +433,17 @@ const TextoAboutUsDev = () => css`
   text-align: justify;
   grid-column: 3/7;
 `
+const LinksDevs = () => css`
+  font-size: ${constants.fontSizeCardProduct};
+  font-family: ${constants.fontFamilyHeader}; 
+  color: ${colors.textLogoColor};
+  text-decoration: none;
+  padding-right:80px;
+`
+const IconRedes = () => css`
+  witdh:32px;
+  height:32px;
+`
 export const mixins = {
   Header,
   LogoHeader,
@@ -471,4 +482,6 @@ export const mixins = {
   FotoDev,
   TituloAboutUsDev,
   TextoAboutUsDev,
+  LinksDevs,
+  IconRedes,
 };

@@ -13,7 +13,8 @@ import Jay from "../../assets/Images/jay.jpeg"
 import Keven from "../../assets/Images/keven.jpeg"
 import Elieldo from "../../assets/Images/elieldo.jpg"
 import Karen from "../../assets/Images/FotoKaren.jpg"
-
+import GitHub from "../../assets/Icons/icons8-github-32.png"
+import LinkedIn from "../../assets/Icons/icons8-linkedin-32.png"
 export const AboutUs = () => {
   const [userLogged, setUserLogged] = useState<createUserType>({
     id: "",
@@ -94,8 +95,21 @@ export const AboutUs = () => {
             correr atrás... Hoje sou um entusiasta da tecnologia, me orgulho da decisão que 
             tomei em relação ao curso e posso dizer: hoje, eu sou feliz!<br/>
             Com tudo isso, esqueci do meu sonho de criança e vivo intensamente o meu sonho 
-            de adulto!
+            de adulto!<br/><br/>
+            <S.LinksDevs
+            href="https://www.linkedin.com/in/jaymesonmendes/"
+            target="_blank">
+                <S.IconRedes
+                src={LinkedIn}/> LinkedIn
+            </S.LinksDevs>
+            <S.LinksDevs
+            href="https://github.com/jayymeson"
+            target="_blank">
+                <S.IconRedes
+                src={GitHub}/> GitHub
+            </S.LinksDevs>
             </S.TextoAboutUsDev>
+            
         </S.TimeAboutUs>
         <S.TimeAboutUs>
         <S.FotoDev
@@ -110,19 +124,45 @@ export const AboutUs = () => {
             Se a época da Inquisição fosse hoje, com certeza estaríamos condenados. 
             Algumas linhas de código, diversos arquivos, e scripts, conseguimos criar um 
             universo inteiro, ou melhor, um Metaverso".<br/> Que todos nós nos tornemos magos 
-            implacáveis!
+            implacáveis!<br/><br/>
+                <S.LinksDevs
+                href="https://www.linkedin.com/in/keven-ferreira-moraes-4327a463/"
+                target="_blank">
+                    <S.IconRedes
+                    src={LinkedIn}/> LinkedIn
+                </S.LinksDevs>
+                <S.LinksDevs
+                href="https://github.com/Kevenfz"
+                target="_blank">
+                    <S.IconRedes
+                    src={GitHub}/> GitHub
+                </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
+
         <S.TimeAboutUs>
             <S.FotoDev src={Elieldo}/>
             
             <S.TextoAboutUsDev>
-            <S.TituloAboutUsDev>Elieldo Martins</S.TituloAboutUsDev>
-            Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
-            Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
-            dimensões.<br/><br/><br/>
+                <S.TituloAboutUsDev>Elieldo Martins</S.TituloAboutUsDev>
+                Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
+                Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
+                dimensões.<br/><br/><br/><br/>
+                <S.LinksDevs
+                href="https://www.linkedin.com/in/elieldo-martins-05839673/"
+                target="_blank">
+                    <S.IconRedes
+                    src={LinkedIn}/> LinkedIn
+                </S.LinksDevs>
+                <S.LinksDevs
+                href="https://github.com/hefi1413"
+                target="_blank">
+                    <S.IconRedes
+                    src={GitHub}/> GitHub
+                </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
+
         <S.TimeAboutUs>
         <S.FotoDev src={Karen}/>
             <S.TextoAboutUsDev>
@@ -130,7 +170,19 @@ export const AboutUs = () => {
             Olá, sou Karen Lourenço, uma desenvolvedora full-stack e entusiasta do design de UI e UX.
             
             No momento estou cursando engenharia da computação na Faculdade Descomplica e sou aluna da Blue Edtech.
-           <br/> Estou sempre disposta a novos desafios!
+           <br/> Estou sempre disposta a novos desafios!<br/><br/>
+            <S.LinksDevs
+            href="https://www.linkedin.com/in/karenlourenco/"
+            target="_blank">
+                <S.IconRedes
+                src={LinkedIn}/> LinkedIn
+            </S.LinksDevs>
+            <S.LinksDevs
+            href ="https://github.com/KarenMascarenhasLourenco"
+            target="_blank">
+                <S.IconRedes
+                src={GitHub}/> GitHub
+            </S.LinksDevs>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
       {/* <S.Footer>
