@@ -5,10 +5,24 @@ import Modal from "react-modal";
 import EditLogo from "../../assets/Icons/editIcon.png";
 import productService from "../../services/productService";
 import * as S from "./style";
+import StarRatingComponent from "react-star-rating-component";
+import { SyntheticEvent } from "react-toastify/dist/utils";
 
-export const CardComponent = (props: { loggedUser: createUserType }) => {
+export const CardComponent = (props: {
+  loggedUser: createUserType;
+  inputSearch: string;
+}) => {
   const [modalIsOpen, setIsOpen] = useState<boolean | any>(false);
-  const [products, setProducts] = useState<productType[]>([]);
+  const [searchProduct, setSearchProduct] = useState("");
+  const [products, setProducts] = useState<productType[]>([
+    {
+      name: "",
+      category: "",
+      description: "",
+      price: 26,
+      image: "",
+    },
+  ]);
   const [productId, setProductId] = useState<string | any>("");
 
   const jwt = localStorage.getItem("jwt");
@@ -23,6 +37,14 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
     setProducts(response.data);
   };
 
+  const searchProducts = products.filter((prod) => {
+    if (props.inputSearch === "") {
+      return prod;
+    } else {
+      return prod.name.toLowerCase().includes(props.inputSearch);
+    }
+  });
+
   function openModal() {
     setIsOpen(true);
   }
@@ -34,7 +56,7 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
   return (
     <>
       <S.SpaceCard>
-        {products.map((tree) => (
+        {searchProducts.map((tree) => (
           <>
             <S.CardProduct key={tree.id} onClick={() => setProductId(tree.id)}>
               <S.InfoProduct>
@@ -44,13 +66,13 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
                     {tree.description}
                   </S.DescriptionProduct>
 
-                  {/* <StarRatingComponent
+                  <StarRatingComponent
                     name="Rating"
                     value={5}
                     starCount={5}
                     starColor={"#04bf55"}
                     editing={false}
-                  /> */}
+                  />
                 </S.LeftSide>
 
                 <S.RightSide>

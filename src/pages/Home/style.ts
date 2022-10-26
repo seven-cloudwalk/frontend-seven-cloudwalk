@@ -1,5 +1,13 @@
 import styled, { css } from "styled-components";
 
+export const SearchProduct = styled.input`
+
+`
+
+export const SearchProductBtn = styled.button`
+
+`
+
 export const MainBackground = styled.section`
   ${({ theme }) => css`
     ${theme.mixins.MainBackground}
