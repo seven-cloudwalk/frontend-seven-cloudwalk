@@ -7,6 +7,7 @@ import { CardComponent } from "../../components/CardComponent";
 import { FooterComponent } from "../../components/FooterComponent";
 import LoginService from "../../services/authService";
 import Folhas from "../../assets/Images/folhas.png";
+import SearchIcon from "../../assets/Icons/search.png";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
@@ -36,7 +37,6 @@ export const Home = () => {
   const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
-    // getAllProducts();
     if (jwt) {
       getUserLogged();
     } else {
@@ -50,13 +50,6 @@ export const Home = () => {
     console.log(response);
   };
 
-  // const getAllProducts = async () => {
-  //   const response = await productService.getAllProducts();
-  //   if (response) {
-  //     setSearchProducts(response);
-  //   }
-  // };
-
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const srcProduct = event.target.value.toLowerCase();
     setInputSearchProducts(srcProduct);
@@ -69,20 +62,25 @@ export const Home = () => {
       <BannerCarousel />
 
       <S.CardSpace>
-        <S.SearchProduct
-          placeholder="Busque sua semente"
-          onChange={inputHandler}
-        />
-        <S.SearchProductBtn></S.SearchProductBtn>
-
         <S.TitleSpace>
           <S.Divisors />
           <S.TitleProducts>NOVOS PRODUTOS</S.TitleProducts>
           <S.Divisors />
         </S.TitleSpace>
 
+        <S.SearchSpace>
+          <S.SearchProduct
+            placeholder="Busque sua semente"
+            onChange={inputHandler}
+          />
+          <S.SearchIcon src={SearchIcon} alt="Icone de busca" />
+        </S.SearchSpace>
+
         <S.SpaceCards>
-          <CardComponent loggedUser={userLogged} inputSearch={inputSearchProducts}/>
+          <CardComponent
+            loggedUser={userLogged}
+            inputSearch={inputSearchProducts}
+          />
         </S.SpaceCards>
 
         <S.FolhasImg src={Folhas} />

@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import { createUserType, productType } from "../../types/types";
 import { ModalComponent } from "../ModalComponent";
-import Modal from "react-modal";
-import EditLogo from "../../assets/Icons/editIcon.png";
-import productService from "../../services/productService";
-import * as S from "./style";
 import StarRatingComponent from "react-star-rating-component";
-import { SyntheticEvent } from "react-toastify/dist/utils";
+import productService from "../../services/productService";
+import EditLogo from "../../assets/Icons/editIcon.png";
+import Modal from "react-modal";
+import * as S from "./style";
 
 export const CardComponent = (props: {
   loggedUser: createUserType;
   inputSearch: string;
 }) => {
   const [modalIsOpen, setIsOpen] = useState<boolean | any>(false);
-  const [searchProduct, setSearchProduct] = useState("");
   const [products, setProducts] = useState<productType[]>([
     {
       name: "",
@@ -76,12 +74,20 @@ export const CardComponent = (props: {
                 </S.LeftSide>
 
                 <S.RightSide>
-                  <S.ImgProduct src={tree.image} alt="Ilustração da arvore" />
+                  <S.ImgProduct
+                    src={tree.image}
+                    alt={`Imagem ilustrativa da arvore ${tree.name}`}
+                  />
                 </S.RightSide>
               </S.InfoProduct>
 
               <S.PriceBtnBuy>
-                <S.PriceProduct>R$ {tree.price}</S.PriceProduct>
+                <S.PriceProduct>
+                  {tree.price.toLocaleString("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </S.PriceProduct>
                 {props.loggedUser.roleAdmin === true ? (
                   <S.OptionsBtn onClick={openModal} src={EditLogo} />
                 ) : (
@@ -101,7 +107,7 @@ export const CardComponent = (props: {
                 },
                 overlay: {
                   border: "none",
-                  backgroundColor: "#00000052",
+                  backgroundColor: "#00000019",
                 },
               }}
             >
