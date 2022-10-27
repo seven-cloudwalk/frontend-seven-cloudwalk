@@ -32,9 +32,7 @@ export const Modal = styled.div`
     width: 40rem;
     height: 30rem;
     border-radius: 0.5rem;
-    gap: 5rem;
-    -webkit-box-shadow: 0px 7px 18px 2px rgba(0, 0, 0, 0.94);
-    box-shadow: 0px 7px 18px 2px rgba(0, 0, 0, 0.94);
+    gap: 4rem;
   `}
 `;
 

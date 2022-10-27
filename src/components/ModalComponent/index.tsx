@@ -6,7 +6,7 @@ import productService from "../../services/productService";
 import ManagerLogo from "../../assets/Images/ImgModal.png";
 import swal from "sweetalert";
 import * as S from "./style";
-import "./style.css"
+import "./style.css";
 
 export const ModalComponent = (props: {
   closeModal: boolean | any;
@@ -72,7 +72,7 @@ export const ModalComponent = (props: {
     }
   };
 
-  //TODO FAZER TODO O CRUD PRODUCTS PORRA
+  //TODO DUVIDA SOBRE UPDATE PRODUCTS
   const handleOption = (event: any) => {
     setOption(event.target.id);
     console.log(event.target.id);
@@ -185,6 +185,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.name}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -197,6 +198,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.category}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -209,6 +211,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.description}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -221,6 +224,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : `R$ ${products.price}`}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -232,6 +236,7 @@ export const ModalComponent = (props: {
               id="image"
               placeholder={option == "CREATE" ? "" : products.image}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
