@@ -11,7 +11,7 @@ export const SpaceCard = styled.section`
   /* overflow-y: scroll;
   overflow-x: hidden; */
   gap: 5rem;
-  margin-top: 1.5rem;
+  margin-top: -2rem;
   ::-webkit-scrollbar {
     width: 0.4rem;
   }

@@ -8,6 +8,7 @@ import { FooterComponent } from "../../components/FooterComponent";
 import LoginService from "../../services/authService";
 import Folhas from "../../assets/Images/folhas.png";
 import SearchIcon from "../../assets/Icons/search.png";
+import UpdateIcon from "../../assets/Icons/system-update.png";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
@@ -73,7 +74,10 @@ export const Home = () => {
             placeholder="Busque sua semente"
             onChange={inputHandler}
           />
-          <S.SearchIcon src={SearchIcon} alt="Icone de busca" />
+          <S.SearchIcon src={SearchIcon} className="loadingIcon" alt="Icone de busca" />
+
+          {userLogged.roleAdmin == true ? <S.UpdateIcon src={UpdateIcon} alt="Icone de atualização" /> : ''}
+
         </S.SearchSpace>
 
         <S.SpaceCards>
@@ -83,7 +87,7 @@ export const Home = () => {
           />
         </S.SpaceCards>
 
-        <S.FolhasImg src={Folhas} />
+        {/* <S.FolhasImg src={Folhas} /> */}
 
         <FooterComponent />
       </S.CardSpace>
