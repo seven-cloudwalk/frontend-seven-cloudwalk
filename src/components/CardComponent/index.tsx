@@ -107,7 +107,7 @@ export const CardComponent = (props: {
                 },
                 overlay: {
                   border: "none",
-                  backgroundColor: "#00000052",
+                  backgroundColor: "#00000013",
                 },
               }}
             >

@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
+import logo from "../../assets/Icons/editIcon.png";
 
 export const SearchSpace = styled.div`
   ${({ theme }) => css`
     display: flex;
-    width: 73%;
+    width: 72%;
     align-items: center;
     justify-content: flex-start;
   `}
@@ -48,17 +49,34 @@ export const SearchIcon = styled.img`
   `}
 `;
 
+export const InputUpdateAll = styled.input`
+  display: none;
+`;
+
 export const UpdateIcon = styled.img`
   ${({ theme }) => css`
     position: relative;
     width: 3rem;
-    left: 54rem;
+    left: 53rem;
     top: 0.45rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     :hover {
-      /* transform: scale(1.09); */
+      transform: scale(1.09);
+      background-image: url({logo});
+  `}
+`;
 
+export const ConfirmUpdateAll = styled.img`
+  ${({ theme }) => css`
+    position: relative;
+    width: 3rem;
+    left: 46rem;
+    top: 0.30rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    :hover {
+      transform: scale(1.09);
   `}
 `;
 
@@ -121,7 +139,7 @@ export const LogoFooter = styled.img`
 export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: 75%;
+    width: 80%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;

@@ -108,14 +108,10 @@ export const ModalComponent = (props: {
     }
   };
 
-  // const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setInputValue(event.target.value);
-  // };
-
   const createProduct = async () => {
     const response = await productService.createProducts(createProducts);
     if (response) {
-      toast.success("Uma nova semente foi plantada! 🌱🌳");
+      toast.success("Uma nova semente foi plantada! 🌱");
       setTimeout(() => {
         window.location.reload();
       }, 2000);
