@@ -1,5 +1,5 @@
 import api from "./api";
-import { productType } from "../types/types";
+import { productType, updateAllProductsType } from "../types/types";
 
 const productService = {
   getAllProducts: () =>
@@ -24,7 +24,22 @@ const productService = {
     api
       .patch(`products/updateProducts/${id}`, values)
       .then((response: any) => response)
-      .catch((error: any) => error.response), 
+      .catch((error: any) => error.response),
+
+  updateAllProducts: async (req: updateAllProductsType[]) => {
+    // api
+    // .patch("/products/updateAll", req)
+    // .then((response: any) => response)
+    // .catch((error: any) => error.response),
+   
+    try {
+      let response = await api.patch("/products/updateAll", req);
+      return response.data;
+    } catch (error) {
+      console.log("Error:", error);
+      return error;
+    }
+  },
 
   deleteProducts: (id: productType) =>
     api

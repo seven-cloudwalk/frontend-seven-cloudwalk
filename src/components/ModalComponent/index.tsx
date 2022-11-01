@@ -34,11 +34,14 @@ export const ModalComponent = (props: {
     image: "",
   });
 
+  const [inputValue, setInputValue] = useState(
+    option == "CREATE" ? "" : products.name
+  );
+
   useEffect(() => {
     setProducts(props.treeData);
     setProductId(props.productID);
     getProductByIdData(props.productID);
-    compareType();
   }, []);
 
   const getProductByIdData = async (productID: string) => {
@@ -48,6 +51,7 @@ export const ModalComponent = (props: {
       setIsInfoLoading(false);
     }
     setProducts(response.data);
+    compareType();
   };
 
   const compareType = () => {
@@ -72,7 +76,6 @@ export const ModalComponent = (props: {
     }
   };
 
-  //TODO DUVIDA SOBRE UPDATE PRODUCTS
   const handleOption = (event: any) => {
     setOption(event.target.id);
     console.log(event.target.id);
@@ -108,7 +111,7 @@ export const ModalComponent = (props: {
   const createProduct = async () => {
     const response = await productService.createProducts(createProducts);
     if (response) {
-      toast.success("Uma nova semente foi plantada! 🌱🌳");
+      toast.success("Uma nova semente foi plantada! 🌱");
       setTimeout(() => {
         window.location.reload();
       }, 2000);

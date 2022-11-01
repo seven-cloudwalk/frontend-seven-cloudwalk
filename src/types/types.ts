@@ -32,3 +32,9 @@ export interface productType {
   image: string;
   stock?: boolean;
 }
+
+export interface updateAllProductsType {
+  Código: string;
+  Descrição: string;
+  Percentual: number;
+}

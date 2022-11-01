@@ -234,7 +234,7 @@ const CardProduct = () => css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20rem;
+  width: 22rem;
   height: 11rem;
   border-radius: 1rem;
   background-color: white;
@@ -260,8 +260,9 @@ const InfoProduct = () => css`
 
 const ImgProduct = () => css`
   position: relative;
-  bottom: 2rem;
-  right: 0.5rem;
+  bottom: 1.5rem;
+  left: .5rem;
+  /* right: 0.1rem; */
   width: 11rem;
   height: 11rem;
 `;

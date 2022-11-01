@@ -1,18 +1,19 @@
 import styled, { css } from "styled-components";
+import logo from "../../assets/Icons/editIcon.png";
 
 export const SearchSpace = styled.div`
   ${({ theme }) => css`
     display: flex;
-    width: 100%;
+    width: 72%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   `}
 `;
 
 export const SearchProduct = styled.input`
   ${({ theme }) => css`
     background-color: transparent;
-    width: 20%;
+    width: 30%;
     font-size: 1.02rem;
     border: 2.5px solid transparent;
     border-bottom-color: ${theme.colors.hoverHeaderColor};
@@ -44,7 +45,38 @@ export const SearchIcon = styled.img`
     position: relative;
     width: 1.5rem;
     right: 2.1rem;
-    top: .37rem;
+    top: 0.37rem;
+  `}
+`;
+
+export const InputUpdateAll = styled.input`
+  display: none;
+`;
+
+export const UpdateIcon = styled.img`
+  ${({ theme }) => css`
+    position: relative;
+    width: 3rem;
+    left: 53rem;
+    top: 0.45rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    :hover {
+      transform: scale(1.09);
+      background-image: url({logo});
+  `}
+`;
+
+export const ConfirmUpdateAll = styled.img`
+  ${({ theme }) => css`
+    position: relative;
+    width: 3rem;
+    left: 46rem;
+    top: 0.30rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    :hover {
+      transform: scale(1.09);
   `}
 `;
 
@@ -82,7 +114,7 @@ export const TitleProducts = styled.span`
 `;
 
 export const Divisors = styled.div`
-  width: 550px;
+  width: 400px;
   border-radius: 1rem;
   /* height: .1px; */
   border: 2px solid #014034;
@@ -107,7 +139,7 @@ export const LogoFooter = styled.img`
 export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: 75%;
+    width: 80%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;

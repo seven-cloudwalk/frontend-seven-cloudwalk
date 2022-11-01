@@ -17,7 +17,7 @@ export const TitleModal = styled.h1`
     top: 12.5rem;
     left: 46.2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
-    color: #014034;
+    color: #c2f2dc;
   `}
 `;
 
@@ -28,7 +28,7 @@ export const Modal = styled.div`
     box-sizing: border-box;
     align-items: center;
     justify-content: space-around;
-    background-color: #c2f2dc;
+    background-color: #014034;
     width: 40rem;
     height: 30rem;
     border-radius: 0.5rem;
@@ -52,8 +52,8 @@ export const TitleFormModal = styled.h1`
   ${({ theme }) => css`
     position: absolute;
     top: 15rem;
-    left: 51.5rem;
-    color: #014034;
+    left: 50.9rem;
+    color: #ffff;
     font-size: 1.2rem;
   `}
 `;
@@ -78,7 +78,7 @@ export const InputModal = styled.input`
     /* border-right-color: ${theme.colors.hoverHeaderColor}; */
     outline: 0;
     transition: all 0.3s ease-in-out;
-    color: #014034;
+    color: #c2f2dc;
     font-weight: bold;
     padding: 0.1rem;
     box-sizing: border-box;
@@ -88,9 +88,10 @@ export const InputModal = styled.input`
       border-bottom: 2.5px solid #fff;
       padding: 0.1rem;
       box-sizing: border-box;
+      border-radius: 0.2rem;
     }
     ::placeholder {
-      color: #575757cb;
+      color: #8e8e8e;
       font-size: 0.85rem;
     }
   `}
@@ -101,7 +102,7 @@ export const LabelModal = styled.label`
     font-size: ${theme.constants.fontSizeHeader};
     font-family: ${theme.constants.fontFamilyHeader};
     font-weight: bold;
-    color: #014034;
+    color: #ffff;
     box-sizing: border-box;
     margin-top: 0.5rem;
     margin-bottom: 0.2rem;
@@ -200,6 +201,7 @@ export const LogoModal = styled.img`
   ${({ theme }) => css`
     width: 16rem;
     height: 17rem;
+    transform: scaleX(-1);
     /* margin-top: 1rem; */
   `}
 `;
@@ -208,7 +210,7 @@ export const CloseBtnModal = styled.p`
   ${({ theme }) => css`
     position: absolute;
     transform: rotate(90);
-    color: #014034;
+    color: #ffff;
     font-size: 1.2rem;
     font-weight: bold;
     top: 12.5rem;
