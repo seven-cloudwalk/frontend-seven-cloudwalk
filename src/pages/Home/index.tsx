@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BannerCarousel } from "../../components/BannerCarousel";
 import { HeaderComponent } from "../../components/HeaderComponent";

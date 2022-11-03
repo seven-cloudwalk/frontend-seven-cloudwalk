@@ -87,9 +87,12 @@ export const LoginPage = () => {
             <S.spanLoginPage onClick={() => navigate("/register-user")}>
               Cadastre-se
             </S.spanLoginPage>
+          <S.RecoverPassword>Recuperar senha</S.RecoverPassword>
+
           </S.LinkRegisterPage>
 
           <S.btnLogin>Entrar</S.btnLogin>
+          
         </S.InputLoginField>
       </S.CardLogin>
     </S.MainSection>
