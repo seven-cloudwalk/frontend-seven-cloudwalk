@@ -142,9 +142,10 @@ const CardLoginPage = () => css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 27rem;
-  height: 30rem;
-  padding: 0.3rem;
+  width: 30rem;
+  height: 32rem;
+  padding: 1rem;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.73);
   border-radius: 0.7rem;
   -webkit-box-shadow: 2px 10px 9px 2px #000000;
@@ -171,7 +172,7 @@ const BtnLoginPage = () => css`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18rem;
+  width: 25rem;
   height: 2.5rem;
   padding: 0.5rem;
   border: none;

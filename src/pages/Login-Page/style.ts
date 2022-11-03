@@ -38,7 +38,7 @@ export const InputLabelLogin = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
     .label {
       font-family: ${theme.constants.fontFamilyHeader};
       color: ${theme.colors.logoLoginPage};
@@ -58,7 +58,7 @@ export const LabelLogin = styled.label`
 export const InputLogin = styled.input`
   ${({ theme }) => css`
     background-color: transparent;
-    width: 20rem;
+    width: 24rem;
     font-size: 1.02rem;
     border: 1px solid transparent;
     border-bottom-color: #fff;
@@ -82,14 +82,15 @@ export const LinkRegisterPage = styled.div`
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-    margin-left: -5.5rem;
-    margin-top: -3rem;
+    /* margin-left: -5.5rem; */
+    margin-top: -1rem;
   `}
 `;
 
 export const pLoginPage = styled.p`
   ${({ theme }) => css`
     color: white;
+    text-align: center;
   `}
 `;
 
@@ -99,8 +100,6 @@ export const spanLoginPage = styled.span`
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     :hover {
-      transform: scale(1.07);
-      margin-left: 0.2rem;
       font-weight: bold;
     }
   `}
@@ -119,7 +118,7 @@ export const headerCardLogin = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: .6rem;
+    /* margin-top: .6rem; */
   `}
 `;
 
@@ -133,7 +132,7 @@ export const logoNameLoginPage = styled.div`
     color: ${theme.colors.logoLoginPage};
     width: 100%;
     /* gap: .5rem; */
-    margin-top: -2rem;
+    /* margin-top: -2rem; */
   `}
 `;
 
@@ -144,7 +143,7 @@ export const titleCardLogin = styled.p`
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
-    margin-top: -.2rem;
+    margin-top: -0.2rem;
   `}
 `;
 
@@ -171,6 +170,20 @@ export const IconBack = styled.img`
     transition: all 0.5s ease-in-out;
     :hover {
       transform: scale(1.08);
+    }
+  `}
+`;
+
+export const RecoverPassword = styled.span`
+  ${({ theme }) => css`
+    text-align: start;
+    color: ${theme.colors.logoLoginPage};
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-left: 2px solid green;
+    padding-left: .5rem;
+    :hover {
+      font-weight: bold;
     }
   `}
 `;
