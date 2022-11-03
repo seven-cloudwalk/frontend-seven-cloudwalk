@@ -1,4 +1,3 @@
-import React from 'react'
 import loading from "./../../assets/icons/loading-gif.gif";
 import * as S from "./style";
 
