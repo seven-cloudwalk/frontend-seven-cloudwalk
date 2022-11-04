@@ -140,10 +140,10 @@ export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
     width: 80%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10rem;
+    /* margin-bottom: 5rem; */
     /* overflow-y: scroll; */
   `}
 `;
