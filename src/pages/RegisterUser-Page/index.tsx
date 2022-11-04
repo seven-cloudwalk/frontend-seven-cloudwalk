@@ -34,10 +34,10 @@ export const RegisterUserPage = () => {
     const response = await userService.createUser(values);
     
     if (response.status === 201) {
-      toast.success(response.data);
+      toast.success(`${response.data.message}`);
       navigate("/login");
     } else {
-      toast.error(response.data.message);
+      toast.error(`${response.data.message}`);
     }
   };
 
