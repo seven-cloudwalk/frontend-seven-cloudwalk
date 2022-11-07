@@ -3,6 +3,10 @@ export interface LoginType {
   password: string;
 }
 
+export interface RecoverEmailType {
+  email: string;
+}
+
 export interface createUserType {
   id?: string;
   nickname: string;
@@ -37,4 +41,9 @@ export interface updateAllProductsType {
   Código: string;
   Descrição: string;
   Percentual: number;
+}
+
+export interface updatePasswordType {
+  password: string;
+  confirmPassword: string;
 }

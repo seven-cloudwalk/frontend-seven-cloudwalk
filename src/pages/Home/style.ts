@@ -34,7 +34,7 @@ export const SearchProduct = styled.input`
       border-radius: 0.5rem;
     }
     ::placeholder {
-      color: #575757cb;
+      color: #606060;
       font-size: 1.2rem;
     }
   `}
@@ -116,6 +116,7 @@ export const TitleProducts = styled.span`
 export const Divisors = styled.div`
   width: 400px;
   border-radius: 1rem;
+  margin-top: .9rem;
   /* height: .1px; */
   border: 2px solid #014034;
 `;
@@ -140,10 +141,10 @@ export const SpaceCards = styled.div`
   ${({ theme }) => css`
     position: relative;
     width: 80%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10rem;
+    /* margin-bottom: 5rem; */
     /* overflow-y: scroll; */
   `}
 `;

@@ -23,7 +23,7 @@ export const CardLogin = styled.form`
     align-items: center;
     justify-content: center;
     width: 28rem;
-    height: 16rem;
+    height: 24rem;
     padding: 1rem;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.73);
@@ -50,10 +50,16 @@ export const InputLabelLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
+    /* gap: 1rem; */
+    /* line-height: 2; */
     margin-bottom: 1rem;
     .label {
-      margin-right: 4.7rem;
+      margin-right: 11rem;
+      font-family: ${theme.constants.fontFamilyHeader};
+      color: ${theme.colors.logoLoginPage};
+    }
+    .label2 {
+      margin-right: 4.2rem;
       font-family: ${theme.constants.fontFamilyHeader};
       color: ${theme.colors.logoLoginPage};
     }
@@ -66,6 +72,7 @@ export const TitleRecoverEmail = styled.h1`
     font-family: ${theme.constants.fontFamilyHeader};
     font-weight: bold;
     color: ${theme.colors.hoverHeaderColor};
+    margin-bottom: 2rem;
   `}
 `;
 
@@ -89,6 +96,7 @@ export const InputLogin = styled.input`
     transition: all 0.3s ease-in-out;
     color: #fff;
     margin-top: .5rem;
+    margin-bottom: 3rem;
     :focus {
       background: none;
       border-bottom: 2px solid ${theme.colors.hoverHeaderColor};
@@ -114,7 +122,7 @@ export const btnLogin = styled.button`
     color: #fff;
     background-color: #009e45;
     transition: all 0.3s ease-in-out;
-    margin-top: 1rem;
+    margin-top: -.5rem;
     margin-bottom: 1.5rem;
     :hover {
       background-color: ${theme.colors.hoverHeaderColor};
