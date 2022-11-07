@@ -32,7 +32,7 @@ export const RecoverPassword = () => {
 
       <S.CardLogin onSubmit={handleSendEmail}>
         <S.InputLabelLogin>
-          <S.TitleRecoverEmail>Recuperação de conta:</S.TitleRecoverEmail>
+          <S.TitleRecoverEmail>Recuperação de conta</S.TitleRecoverEmail>
           <S.LabelLogin className="label" htmlFor="email">
             Digite o e-mail cadastrado
           </S.LabelLogin>
