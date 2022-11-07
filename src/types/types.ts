@@ -42,3 +42,8 @@ export interface updateAllProductsType {
   Descrição: string;
   Percentual: number;
 }
+
+export interface updatePasswordType {
+  password: string;
+  confirmPassword: string;
+}

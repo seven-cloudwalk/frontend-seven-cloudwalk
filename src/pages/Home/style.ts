@@ -34,7 +34,7 @@ export const SearchProduct = styled.input`
       border-radius: 0.5rem;
     }
     ::placeholder {
-      color: #575757cb;
+      color: #606060;
       font-size: 1.2rem;
     }
   `}
@@ -116,6 +116,7 @@ export const TitleProducts = styled.span`
 export const Divisors = styled.div`
   width: 400px;
   border-radius: 1rem;
+  margin-top: .9rem;
   /* height: .1px; */
   border: 2px solid #014034;
 `;

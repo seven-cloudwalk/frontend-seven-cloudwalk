@@ -5,6 +5,7 @@ import { RegisterUserPage } from "./pages/RegisterUser-Page";
 import {AboutUs} from "./pages/AboutUs"
 import { ConfirmEmailPage } from "./pages/ConfirmEmail";
 import { RecoverPassword } from "./pages/RecoverPassword";
+import { UpdatePassword } from "./pages/UpdatePassword";
 
 export const Router = () => {
   return (
@@ -15,6 +16,7 @@ export const Router = () => {
       <Route path="/email-validated" element={<ConfirmEmailPage />} />
       <Route path="/recover-password" element={<RecoverPassword />} />
       <Route path="/aboutUs" element={<AboutUs/>}/>
+      <Route path="/test" element={<UpdatePassword/>}/>
     </Routes>
   );
 };
