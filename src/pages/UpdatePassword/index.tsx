@@ -1,9 +1,8 @@
-import * as S from "./style";
-import IconBack from "../../assets/Icons/angulo-circulo-esquerda.svg";
+import { updatePasswordType } from "../../types/types";
 import { useState } from "react";
-import { RecoverEmailType, updatePasswordType } from "../../types/types";
 import { toast } from "react-toastify";
 import userService from "../../services/userService";
+import * as S from "./style";
 
 export const UpdatePassword = () => {
   const [password, setPassword] = useState<updatePasswordType>({
@@ -32,7 +31,7 @@ export const UpdatePassword = () => {
 
   return (
     <S.MessageField>
-      <S.IconBack onClick={() => history.back()} src={IconBack} />
+      {/* <S.IconBack onClick={() => history.back()} src={IconBack} /> */}
 
       <S.CardLogin onSubmit={handleSendEmail}>
         <S.InputLabelLogin>
