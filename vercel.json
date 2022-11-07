@@ -5,6 +5,7 @@
     { "source": "/register-user", "destination": "/" },
     { "source": "/email-validated", "destination": "/" },
     { "source": "/recover-password", "destination": "/" },
-    { "source": "/aboutUs", "destination": "/" }
+    { "source": "/aboutUs", "destination": "/" },
+    { "source": "/update-password", "destination": "/" }
   ]
 }
