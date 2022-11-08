@@ -9,17 +9,18 @@ import {
 } from "../../types/types";
 import { CardComponent } from "../../components/CardComponent";
 import { FooterComponent } from "../../components/FooterComponent";
+import { toast } from "react-toastify";
 import LoginService from "../../services/authService";
 import Folhas from "../../assets/Images/folhas.png";
 import CheckIcon from "../../assets/Icons/check.png";
 import SearchIcon from "../../assets/Icons/search.png";
 import UpdateIcon from "../../assets/Icons/system-update.png";
+import productService from "../../services/productService";
 import * as XLSX from "xlsx";
 import * as S from "./style";
 import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.css";
-import productService from "../../services/productService";
-import { toast } from "react-toastify";
+import { LoadingComponent } from "../../components/LoadingComponent";
 
 export const Home = () => {
   const [userLogged, setUserLogged] = useState<createUserType>({
@@ -39,7 +40,9 @@ export const Home = () => {
       image: "",
     },
   ]);
-  const [updateProduct, setUpdateProduct] = useState<updateAllProductsType[]>([]);
+  const [updateProduct, setUpdateProduct] = useState<updateAllProductsType[]>(
+    []
+  );
   const [inputSearchProducts, setInputSearchProducts] = useState("");
 
   const navigate = useNavigate();
@@ -47,7 +50,7 @@ export const Home = () => {
 
   useEffect(() => {
     if (jwt) {
-      getUserLogged();      
+      getUserLogged();
     } else {
       localStorage.clear();
       console.log("Sem informações do usuario logado");
@@ -57,7 +60,6 @@ export const Home = () => {
   const getUserLogged = async () => {
     const response = await LoginService.loggedUser();
     setUserLogged(response.data);
-
   };
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -145,14 +147,23 @@ export const Home = () => {
             )}
           </label>
 
-          {updateProduct.length <= 0 ? "" : <S.ConfirmUpdateAll src={CheckIcon} alt="Icone de confirmação" onClick={updateAllProducts}/>}
+          {updateProduct.length <= 0 ? (
+            ""
+          ) : (
+            <S.ConfirmUpdateAll
+              src={CheckIcon}
+              alt="Icone de confirmação"
+              onClick={updateAllProducts}
+            />
+          )}
         </S.SearchSpace>
 
         <S.SpaceCards>
-          <CardComponent
-            loggedUser={userLogged}
-            inputSearch={inputSearchProducts}
-          />
+            <CardComponent
+              loggedUser={userLogged}
+              inputSearch={inputSearchProducts}
+              infoLoading={true}
+            />
         </S.SpaceCards>
 
         {/* <S.FolhasImg src={Folhas} /> */}

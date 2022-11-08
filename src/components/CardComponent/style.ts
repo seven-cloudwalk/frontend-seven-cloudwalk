@@ -97,3 +97,9 @@ export const OptionsBtn = styled.img`
     ${theme.mixins.OptionsBtnCard}
   `}
 `;
+
+export const LoadingIcon = styled.img`
+${({ theme }) => css`
+    width: 15rem;
+  `}
+`
