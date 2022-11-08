@@ -1,10 +1,11 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/" },
-    { "source": "/login", "destination": "/login" },
-    { "source": "/register-user", "destination": "/register-user" },
-    { "source": "/email-validated", "destination": "/email-validated" },
-    { "source": "/recover-password", "destination": "/recover-password" },
-    { "source": "/aboutUs", "destination": "/aboutUs" }
+    { "source": "/login", "destination": "/" },
+    { "source": "/register-user", "destination": "/" },
+    { "source": "/email-validated", "destination": "/" },
+    { "source": "/recover-password", "destination": "/" },
+    { "source": "/aboutUs", "destination": "/" },
+    { "source": "/update-password", "destination": "/" }
   ]
 }
