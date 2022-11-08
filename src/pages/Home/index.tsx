@@ -47,8 +47,9 @@ export const Home = () => {
 
   useEffect(() => {
     if (jwt) {
-      getUserLogged();
+      getUserLogged();      
     } else {
+      localStorage.clear();
       console.log("Sem informações do usuario logado");
     }
   }, []);
@@ -56,6 +57,7 @@ export const Home = () => {
   const getUserLogged = async () => {
     const response = await LoginService.loggedUser();
     setUserLogged(response.data);
+
   };
 
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
