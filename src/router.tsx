@@ -16,7 +16,7 @@ export const Router = () => {
       <Route path="/email-validated" element={<ConfirmEmailPage />} />
       <Route path="/recover-password" element={<RecoverPassword />} />
       <Route path="/aboutUs" element={<AboutUs/>}/>
-      <Route path="/update-password" element={<UpdatePassword/>}/>
+      <Route path="/recovery-confirmation/:id" element={<UpdatePassword/>}/>
     </Routes>
   );
 };

@@ -10,13 +10,13 @@ const userService = {
 
   recoverEmail: (email: string) =>
     api
-      .patch(`users/recovery/${email}`)
+      .post(`users/recovery/${email}`)
       .then((response: any) => response)
       .catch((error: any) => error.response),
   
-      updatePassword: (id: string, password: updatePasswordType) =>
+      updatePassword: (id: string) =>
     api
-      .patch(`users/recovery-confirmation/${id}`, password)
+      .patch(`users/recovery-confirmation/${id}`)
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };

@@ -16,10 +16,9 @@ export const RecoverPassword = () => {
     event.preventDefault();
     const response = await userService.recoverEmail(email);
 
-    if (response.status == 200) {
+    if (response.status == 201) {
       toast.success(`${response.data.message}`);
       console.log(email);
-      
     } else {
       toast.error(`${response.data.message}`);
   
