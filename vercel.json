@@ -6,6 +6,6 @@
     { "source": "/email-validated", "destination": "/" },
     { "source": "/recover-password", "destination": "/" },
     { "source": "/aboutUs", "destination": "/" },
-    { "source": "/update-password", "destination": "/" }
+    { "source": "/update-password/:id", "destination": "/" }
   ]
 }

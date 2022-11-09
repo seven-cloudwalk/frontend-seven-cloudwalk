@@ -1,4 +1,4 @@
-import { createUserType, RecoverEmailType, updatePasswordType } from "../types/types";
+import { createUserType, updatePasswordType } from "../types/types";
 import api from "./api";
 
 const userService = {
@@ -10,13 +10,13 @@ const userService = {
 
   recoverEmail: (email: string) =>
     api
-      .patch(`users/recovery/${email}`)
+      .post(`users/recovery/${email}`)
       .then((response: any) => response)
       .catch((error: any) => error.response),
   
-      updatePassword: (password: updatePasswordType) =>
+      updatePassword: (id: string) =>
     api
-      .patch(`users/recovery-confirmation/${password}`)
+      .patch(`users/recovery-confirmation/${id}`)
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };
