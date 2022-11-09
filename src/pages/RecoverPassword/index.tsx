@@ -1,12 +1,15 @@
-import * as S from "./style";
 import IconBack from "../../assets/Icons/angulo-circulo-esquerda.svg";
-import { useState } from "react";
-import { RecoverEmailType } from "../../types/types";
 import { toast } from "react-toastify";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { RecoverEmailType } from "../../types/types";
+import * as S from "./style";
 import userService from "../../services/userService";
 
 export const RecoverPassword = () => {
   const [email, setEmail] = useState<string>("");
+  
+  const navigate = useNavigate();
 
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -18,6 +21,9 @@ export const RecoverPassword = () => {
 
     if (response.status == 201) {
       toast.success(`${response.data.message}`);
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
       console.log(email);
     } else {
       toast.error(`${response.data.message}`);
