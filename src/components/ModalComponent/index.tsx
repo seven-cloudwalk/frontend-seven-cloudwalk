@@ -122,8 +122,8 @@ export const ModalComponent = (props: {
 
   const updProduct = async () => {
     const updateProduct = await productService.updateProducts(
-      createProducts,
-      productId
+      productId,
+      createProducts
     );
     if (updateProduct.status == 200) {
       toast.success("Semente renovada!");
