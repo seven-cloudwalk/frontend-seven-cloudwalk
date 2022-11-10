@@ -8,23 +8,23 @@ import * as S from "./style";
 
 export const UpdatePassword = () => {
   const [password, setPassword] = useState<updatePasswordType>({
-    id: '',
+    id: "",
     password: "",
     passwordConfirmation: "",
   });
 
-  const [userId, setUserId] = useState<string>("");
+  const [userIdData, setUserIdData] = useState<string>("");
 
   const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
-    handleUserId();
+    // handleUserId();
   }, []);
-
 
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword((password: updatePasswordType) => ({
       ...password,
+      id: userIdData,
       [event.target.name]: event.target.value,
     }));
   };
@@ -40,10 +40,11 @@ export const UpdatePassword = () => {
     }
   };
 
-  const handleUserId = () => {
-    const { userId } = useParams();
-   console.log(userId);
-  }
+  // const handleUserId = () => {
+  //   const { userId } = useParams();
+  //   console.log(userId);
+  //   setUserIdData(userId);
+  // };
 
   return (
     <S.MessageField>
