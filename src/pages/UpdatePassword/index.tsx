@@ -8,7 +8,8 @@ import * as S from "./style";
 
 export const UpdatePassword = () => {
   const params = useParams();
-  const userId = JSON.stringify(params.id);
+  const data = JSON.stringify(params.id);
+  const userId = data.replace(/[\\"]/g, '')
 
   const [password, setPassword] = useState<updatePasswordType>({
     password: "",
