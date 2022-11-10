@@ -7,29 +7,29 @@ import LoginService from "../../services/authService";
 import * as S from "./style";
 
 export const UpdatePassword = () => {
+  const params = useParams();
   const [password, setPassword] = useState<updatePasswordType>({
-    id: "",
+    id: params.id,
     password: "",
     passwordConfirmation: "",
   });
 
-  const [userIdData, setUserIdData] = useState<string>("");
+  const [userIdData, setUserIdData] = useState("");
 
-  const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
     // handleUserId();
-    const { userId } = useParams();
-    console.log(userId);
+    // const { userId } = useParams();
+    // console.log(userId);
+    console.log(params);
     
   }, []);
 
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword((password: updatePasswordType) => ({
+    setPassword({
       ...password,
-      id: userIdData,
       [event.target.name]: event.target.value,
-    }));
+    });
   };
 
   const handleSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -43,11 +43,11 @@ export const UpdatePassword = () => {
     }
   };
 
-  // const handleUserId = () => {
-  //   const { userId } = useParams();
-  //   console.log(userId);
-  //   setUserIdData(userId);
-  // };
+  const handleUserId = () => {
+    const { userId } = useParams();
+    console.log(userId);
+    setUserIdData(userId);
+  };
 
   return (
     <S.MessageField>
