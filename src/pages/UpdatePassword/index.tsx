@@ -20,7 +20,7 @@ export const UpdatePassword = () => {
     // handleUserId();
     // const { userId } = useParams();
     // console.log(userId);
-    console.log(params);
+    console.log(userId);
     
   }, []);
 
