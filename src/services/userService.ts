@@ -16,7 +16,7 @@ const userService = {
   
       updatePassword: (id: updatePasswordType) =>
     api
-      .post(`users/updatePassword/${id}`)
+      .patch(`users/updatePassword/${id}`)
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };
