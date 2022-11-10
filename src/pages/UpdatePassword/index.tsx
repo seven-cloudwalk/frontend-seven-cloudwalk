@@ -19,6 +19,9 @@ export const UpdatePassword = () => {
 
   useEffect(() => {
     // handleUserId();
+    const { userId } = useParams();
+    console.log(userId);
+    
   }, []);
 
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
