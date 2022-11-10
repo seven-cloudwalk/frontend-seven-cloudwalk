@@ -19,7 +19,7 @@ export const UpdatePassword = () => {
     // handleUserId();
     // const { userId } = useParams();
     // console.log(userId);
-    console.log("ID:",userId);
+    console.log("ID:", userId);
     
   }, []);
 
@@ -32,9 +32,10 @@ export const UpdatePassword = () => {
 
   const handleSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    console.log(userId);
     const response = await userService.updatePassword(userId, password);
 
-    if (response.status == 201) {
+    if (response.status == 200) {
       toast.success(`${response.data.message}`);
     } else {
       toast.error(`${response.data.message}`);
