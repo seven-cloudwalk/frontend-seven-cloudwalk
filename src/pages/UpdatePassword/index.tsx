@@ -8,14 +8,13 @@ import * as S from "./style";
 
 export const UpdatePassword = () => {
   const params = useParams();
+  const userId = JSON.stringify(params);
+
   const [password, setPassword] = useState<updatePasswordType>({
-    id: params.id,
+    id: userId,
     password: "",
     passwordConfirmation: "",
   });
-
-  const [userIdData, setUserIdData] = useState("");
-
 
   useEffect(() => {
     // handleUserId();
@@ -68,14 +67,14 @@ export const UpdatePassword = () => {
             placeholder="Senha"
           />
 
-          <S.LabelLogin className="label2" htmlFor="password">
+          <S.LabelLogin className="label2" htmlFor="passwordConfirmation">
             Digite novamente sua senha
           </S.LabelLogin>
           <S.InputLogin
             onChange={handleChangesValues}
             type="password"
-            id="password"
-            name="password"
+            id="passwordConfirmation"
+            name="passwordConfirmation"
             autoComplete="off"
             placeholder="Senha"
           />
