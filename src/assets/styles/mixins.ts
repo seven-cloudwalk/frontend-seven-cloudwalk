@@ -263,11 +263,11 @@ const InfoProduct = () => css`
 
 const ImgProduct = () => css`
   position: relative;
-  bottom: 1.5rem;
-  left: 0.5rem;
+  bottom: 3rem;
+  left: 0.3rem;
   /* right: 0.1rem; */
-  width: 11rem;
-  height: 11rem;
+  width: 14rem;
+  height: 12rem;
 `;
 
 const DivPriceBtnBuy = () => css`
