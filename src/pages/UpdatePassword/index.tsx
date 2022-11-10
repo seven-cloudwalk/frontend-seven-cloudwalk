@@ -43,11 +43,11 @@ export const UpdatePassword = () => {
     }
   };
 
-  const handleUserId = () => {
-    const { userId } = useParams();
-    console.log(userId);
-    setUserIdData(userId);
-  };
+  // const handleUserId = () => {
+  //   const { userId } = useParams();
+  //   console.log(userId);
+  //   setUserIdData(userId);
+  // };
 
   return (
     <S.MessageField>
