@@ -1,7 +1,7 @@
 import { createUserType, updatePasswordType } from "../../types/types";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import userService from "../../services/userService";
 import LoginService from "../../services/authService";
 import * as S from "./style";
@@ -9,8 +9,9 @@ import * as S from "./style";
 export const UpdatePassword = () => {
   const params = useParams();
   const data = JSON.stringify(params.id);
-  const userId = data.replace(/[\\"]/g, '')
-
+  const userId = data.replace(/[\\"]/g, '');
+  const navigate = useNavigate();
+  
   const [password, setPassword] = useState<updatePasswordType>({
     password: "",
     passwordConfirmation: "",
@@ -37,7 +38,10 @@ export const UpdatePassword = () => {
     const response = await userService.updatePassword(userId, password);
 
     if (response.status == 200) {
-      toast.success(`${response.data.message}`);
+      toast.success(`Senha alterada com sucesso!`);
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } else {
       toast.error(`${response.data.message}`);
     }
