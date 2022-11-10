@@ -44,6 +44,7 @@ export interface updateAllProductsType {
 }
 
 export interface updatePasswordType {
+  id?: string;
   password: string;
-  confirmPassword: string;
+  passwordConfirmation: string;
 }
