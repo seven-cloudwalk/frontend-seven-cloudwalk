@@ -1,49 +1,57 @@
 import { createUserType, updatePasswordType } from "../../types/types";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import userService from "../../services/userService";
 import LoginService from "../../services/authService";
 import * as S from "./style";
 
 export const UpdatePassword = () => {
+  const params = useParams();
+  const data = JSON.stringify(params.id);
+  const userId = data.replace(/[\\"]/g, '');
+  const navigate = useNavigate();
+  
   const [password, setPassword] = useState<updatePasswordType>({
-    id: '',
     password: "",
     passwordConfirmation: "",
   });
 
-  const [userId, setUserId] = useState<string>("");
-
-  const jwt = localStorage.getItem("jwt");
-
   useEffect(() => {
-    handleUserId();
+    // handleUserId();
+    // const { userId } = useParams();
+    // console.log(userId);
+    console.log("ID:", userId);
+    
   }, []);
 
-
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword((password: updatePasswordType) => ({
+    setPassword({
       ...password,
       [event.target.name]: event.target.value,
-    }));
+    });
   };
 
   const handleSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const response = await userService.updatePassword(password);
+    console.log(userId);
+    const response = await userService.updatePassword(userId, password);
 
-    if (response.status == 201) {
-      toast.success(`${response.data.message}`);
+    if (response.status == 200) {
+      toast.success(`Senha alterada com sucesso!`);
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } else {
       toast.error(`${response.data.message}`);
     }
   };
 
-  const handleUserId = () => {
-    const { userId } = useParams();
-   console.log(userId);
-  }
+  // const handleUserId = () => {
+  //   const { userId } = useParams();
+  //   console.log(userId);
+  //   setUserIdData(userId);
+  // };
 
   return (
     <S.MessageField>
@@ -64,14 +72,14 @@ export const UpdatePassword = () => {
             placeholder="Senha"
           />
 
-          <S.LabelLogin className="label2" htmlFor="password">
+          <S.LabelLogin className="label2" htmlFor="passwordConfirmation">
             Digite novamente sua senha
           </S.LabelLogin>
           <S.InputLogin
             onChange={handleChangesValues}
             type="password"
-            id="password"
-            name="password"
+            id="passwordConfirmation"
+            name="passwordConfirmation"
             autoComplete="off"
             placeholder="Senha"
           />

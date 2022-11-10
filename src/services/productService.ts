@@ -20,7 +20,7 @@ const productService = {
       .then((response: any) => response)
       .catch((error: any) => error.response),
 
-  updateProducts: (values: productType, id: string) =>
+  updateProducts: (id: string, values: productType ) =>
     api
       .patch(`products/updateProducts/${id}`, values)
       .then((response: any) => response)

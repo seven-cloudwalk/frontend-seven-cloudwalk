@@ -14,9 +14,9 @@ const userService = {
       .then((response: any) => response)
       .catch((error: any) => error.response),
   
-      updatePassword: (id: updatePasswordType) =>
+      updatePassword: (id: string, password: updatePasswordType) =>
     api
-      .post(`users/recovery-confirmation/${id}`)
+      .patch(`users/updatePassword/${id}`, password )
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };
