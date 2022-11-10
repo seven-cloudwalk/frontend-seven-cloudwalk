@@ -11,7 +11,6 @@ export const UpdatePassword = () => {
   const userId = JSON.stringify(params.id);
 
   const [password, setPassword] = useState<updatePasswordType>({
-    id: userId,
     password: "",
     passwordConfirmation: "",
   });
