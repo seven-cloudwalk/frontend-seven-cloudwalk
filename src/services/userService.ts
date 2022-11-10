@@ -16,7 +16,7 @@ const userService = {
   
       updatePassword: (id: string) =>
     api
-      .patch(`users/updatePassword/${id}`)
+      .patch(`users/updatePassword/${id}`, { password:"Abc12345*", passwordConfirmation:"Abc12345*" })
       .then((response: any) => response)
       .catch((error: any) => error.response),
 };
