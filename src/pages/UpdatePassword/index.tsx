@@ -1,20 +1,14 @@
 import { createUserType, updatePasswordType } from "../../types/types";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { useParams } from "react-router-dom";
 import userService from "../../services/userService";
-import * as S from "./style";
 import LoginService from "../../services/authService";
+import * as S from "./style";
 
 export const UpdatePassword = () => {
-  const [userLogged, setUserLogged] = useState<createUserType>({
-    id: "",
-    nickname: "",
-    email: "",
-    password: "",
-    accountType: undefined,
-  });
-
   const [password, setPassword] = useState<updatePasswordType>({
+    id: '',
     password: "",
     passwordConfirmation: "",
   });
@@ -24,21 +18,9 @@ export const UpdatePassword = () => {
   const jwt = localStorage.getItem("jwt");
 
   useEffect(() => {
-    if (jwt) {
-      getUserLogged();
-    } else {
-      console.log("Sem informações do usuario logado");
-    }
+    handleUserId();
   }, []);
 
-  const getUserLogged = async () => {
-    const response = await LoginService.loggedUser();
-    setUserLogged(response.data);
-    debugger
-    console.log(response.data.id);
-    setUserId(response.data.id);
-
-  };
 
   const handleChangesValues = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword((password: updatePasswordType) => ({
@@ -49,7 +31,7 @@ export const UpdatePassword = () => {
 
   const handleSendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const response = await userService.updatePassword(userId);
+    const response = await userService.updatePassword(password);
 
     if (response.status == 201) {
       toast.success(`${response.data.message}`);
@@ -57,6 +39,11 @@ export const UpdatePassword = () => {
       toast.error(`${response.data.message}`);
     }
   };
+
+  const handleUserId = () => {
+    const { userId } = useParams();
+   console.log(userId);
+  }
 
   return (
     <S.MessageField>

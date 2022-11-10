@@ -35,7 +35,9 @@ export const RegisterUserPage = () => {
     
     if (response.status === 201) {
       toast.success(`${response.data.message}`);
-      navigate("/login");
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000);
     } else {
       toast.error(`${response.data.message}`);
     }
