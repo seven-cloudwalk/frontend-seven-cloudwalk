@@ -18,7 +18,7 @@ export const Router = () => {
       <Route path="/recover-password" element={<RecoverPassword />} />
       <Route path="/aboutUs" element={<AboutUs/>}/>
       <Route path="/update-password/:id" element={<UpdatePassword/>}/>
-      <Route path="/product-page/:id" element={<ProductPage  />}/>
+      <Route path="/product-page/:id" element={<ProductPage />}/>
     </Routes>
   );
 };
