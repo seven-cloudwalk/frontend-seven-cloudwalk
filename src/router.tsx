@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { LoginPage } from "./pages/Login-Page";
 import { RegisterUserPage } from "./pages/RegisterUser-Page";
 import {AboutUs} from "./pages/AboutUs"
-
+import {ProductPage} from "./pages/ProductPage"
 export const Router = () => {
   return (
     <Routes>
@@ -13,6 +13,7 @@ export const Router = () => {
       <Route path="/register-user" element={<RegisterUserPage />} />
       <Route path="/test" element={<ModalComponent />} />
       <Route path="/aboutUs" element={<AboutUs/>}/>
+      <Route path="/ProductPage/:productId" element={<ProductPage ProductID={""} />}/>
     </Routes>
   );
 };

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createUserType, productType } from "../../types/types";
 import { ModalComponent } from "../ModalComponent";
 import Modal from "react-modal";
 import EditLogo from "../../assets/Icons/editIcon.png";
 import productService from "../../services/productService";
 import * as S from "./style";
+import {ProductPage} from "../../pages/ProductPage"
 
 export const CardComponent = (props: { loggedUser: createUserType }) => {
   const [modalIsOpen, setIsOpen] = useState<boolean | any>(false);
@@ -12,6 +14,7 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
   const [productId, setProductId] = useState<string | any>("");
 
   const jwt = localStorage.getItem("jwt");
+  const navigate = useNavigate();
 
   useEffect(() => {
     props.loggedUser;
@@ -37,7 +40,7 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
         {products.map((tree) => (
           <>
             <S.CardProduct key={tree.id} onClick={() => setProductId(tree.id)}>
-              <S.InfoProduct>
+              <S.InfoProduct >
                 <S.LeftSide>
                   <S.NameProduct>{tree.name}</S.NameProduct>
                   <S.DescriptionProduct>
@@ -65,7 +68,7 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
                 ) : (
                   ""
                 )}
-                <S.BtnBuyProduct type="submit">COMPRAR</S.BtnBuyProduct>
+                <S.BtnBuyProduct type="submit" onClick={() => navigate("/ProductPage/:productId")} >COMPRAR</S.BtnBuyProduct>
               </S.PriceBtnBuy>
             </S.CardProduct>
 

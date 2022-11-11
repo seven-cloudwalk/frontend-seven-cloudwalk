@@ -22,6 +22,7 @@ const CardSpace = () => css`
   background: #e6ffef;
   width: 100%;
   height: 100%;
+  
 `;
 
 const Header = () => css`
@@ -397,6 +398,7 @@ const itemFooter = () => css`
   font-size: ${constants.fontSizeItensFooter};
   font-family: ${constants.fontFamilyHeader};
   margin-left: 1rem;
+  list-style-type: none;
 `;
 const TituloAboutUs = () => css`
   font-size: ${constants.fontSizeTitlesFooter};
