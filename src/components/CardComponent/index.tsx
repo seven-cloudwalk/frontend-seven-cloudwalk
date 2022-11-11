@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createUserType, productType } from "../../types/types";
 import { ModalComponent } from "../ModalComponent";
 import { LoadingComponent } from "../LoadingComponent";
 import StarRatingComponent from "react-star-rating-component";
 import productService from "../../services/productService";
+import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
 import EditLogo from "../../assets/Icons/editIcon.png";
 import Modal from "react-modal";
-import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
 import * as S from "./style";
+import {ProductPage} from "../../pages/ProductPage"
 
 export const CardComponent = (props: {
   loggedUser: createUserType;
@@ -24,16 +26,18 @@ export const CardComponent = (props: {
       image: "",
     },
   ]);
+
   const [productId, setProductId] = useState<string | any>("");
+
   const [isInfoLoading, setIsInfoLoading] = useState<boolean>(false);
 
   const jwt = localStorage.getItem("jwt");
+  const navigate = useNavigate();
 
   useEffect(() => {
     props.loggedUser;
     getAllProductsData();
     setIsInfoLoading(props.infoLoading);
-    console.log(props.infoLoading);
   }, []);
 
   const getAllProductsData = async () => {
@@ -64,6 +68,7 @@ export const CardComponent = (props: {
   return (
     <>
       <S.SpaceCard>
+
         {isInfoLoading ? (
           <S.LoadingIcon src={LoadingIconCard} />
         ) : (
@@ -109,7 +114,7 @@ export const CardComponent = (props: {
                   ) : (
                     ""
                   )}
-                  <S.BtnBuyProduct type="submit">COMPRAR</S.BtnBuyProduct>
+                  <S.BtnBuyProduct type="submit" onClick={() => navigate(`/product-page/${tree.id}`)} >COMPRAR</S.BtnBuyProduct>
                 </S.PriceBtnBuy>
               </S.CardProduct>
 

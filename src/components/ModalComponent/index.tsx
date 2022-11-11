@@ -34,9 +34,9 @@ export const ModalComponent = (props: {
     image: "",
   });
 
-  const [inputValue, setInputValue] = useState(
-    option == "CREATE" ? "" : products.name
-  );
+  // const [inputValue, setInputValue] = useState(
+  //   option == "CREATE" ? "" : products.name
+  // );
 
   useEffect(() => {
     setProducts(props.treeData);
