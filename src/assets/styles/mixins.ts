@@ -507,8 +507,6 @@ width:40%;
 `;
 const ProductInfoValor = () => css`
 font-weight: bold;
-currency:brl;
-
 font-size: 16pt;
 color: ${colors.textLogoColor}
 `;
@@ -535,7 +533,28 @@ display: flex;
     box-shadow: 0px 0px 6px 0px #04bf55;
   }
 `;
+const AboutUsLinks = () => css`
+  text-decoration: none;
+  display:flex;
+  flex-direction: row;
+  padding-right:50pt;
+  font-size:16.8pt;
+  align-items:center;
+  color: ${colors.textLogoColor}
 
+`;
+const AboutUsIcon = () => css`
+  width:32pt;
+  height:32pt;
+  padding-right:5pt;
+`;
+const Proposta = () => css`
+width:80%;
+margin:0 10%;
+`;
+const LinksDev = () => css`
+  display:flex;
+`;
 
 export const mixins = {
   Header,
@@ -586,4 +605,8 @@ export const mixins = {
   ProductInfo2,
   ProductInfoValor,
   ProductInfoBotao,
+  AboutUsLinks,
+  AboutUsIcon,
+  Proposta,
+  LinksDev,
 };
