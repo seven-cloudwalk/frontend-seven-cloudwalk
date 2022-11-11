@@ -62,10 +62,28 @@ export const ProductPage = () => {
       <BannerCarousel />
       <S.TitleSpace>
         <S.Divisors />
-        <S.TitleProducts>-----</S.TitleProducts>
+        <S.TitleProducts>veja mais</S.TitleProducts>
         <S.Divisors />
       </S.TitleSpace>
-      <section>name{product.name}</section>
+      <S.ProductInfo>
+        <S.ProductInfo2>
+          <S.ProductInfoImage
+          src={product.image}/>
+        </S.ProductInfo2>
+        <S.ProductInfo2>
+          <S.ProductInfoTitle>{product.name}</S.ProductInfoTitle>
+          <S.ProductInfoCategory>Categoria: {product.category}</S.ProductInfoCategory>
+          <S.ProductInfoSubtitle>{product.description}</S.ProductInfoSubtitle>
+          <S.ProductInfoPrice>
+            <S.ProductInfoValor>{product.price.toLocaleString("pt-br", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}</S.ProductInfoValor>
+            <S.ProductInfoBotao>Comprar</S.ProductInfoBotao>
+          </S.ProductInfoPrice>
+        </S.ProductInfo2>
+        
+      </S.ProductInfo>
 
       <FooterComponent />
     </S.MainBackground>

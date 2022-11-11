@@ -49,3 +49,48 @@ export const LogoFooter = styled.img`
     ${theme.mixins.LogoFooter}
   `}
 `;
+export const ProductInfo = styled.section`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfo}
+  `}
+`;
+export const ProductInfoImage = styled.img`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoImage}
+  `}
+`;
+export const ProductInfoTitle = styled.h1`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoTitle}
+  `}
+`;
+export const ProductInfoSubtitle = styled.h3`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoSubtitle}
+  `}
+`;
+export const ProductInfoPrice = styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoPrice}
+  `}
+`;
+export const ProductInfoCategory = styled.p`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoCategory}
+  `}
+`;
+export const ProductInfo2 = styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfo2}
+  `}
+`;
+export const ProductInfoValor = styled.p`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoValor}
+  `}
+`;
+export const ProductInfoBotao = styled.button`
+  ${({ theme }) => css`
+    ${theme.mixins.ProductInfoBotao}
+  `}
+`;
