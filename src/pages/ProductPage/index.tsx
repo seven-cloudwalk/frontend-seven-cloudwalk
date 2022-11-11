@@ -12,7 +12,7 @@ import "../../fonts/Intro-Rust/stylesheet.css";
 import "./style.ts";
 import { productType } from "../../types/types";
 
-export const ProductPage = (props: { ProductID: string }) => {
+export const ProductPage = () => {
   const [userLogged, setUserLogged] = useState<createUserType>({
     id: "",
     nickname: "",
