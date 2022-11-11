@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createUserType, productType } from "../../types/types";
 import { ModalComponent } from "../ModalComponent";
 import { LoadingComponent } from "../LoadingComponent";
@@ -8,6 +9,7 @@ import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
 import EditLogo from "../../assets/Icons/editIcon.png";
 import Modal from "react-modal";
 import * as S from "./style";
+import {ProductPage} from "../../pages/ProductPage"
 
 export const CardComponent = (props: {
   loggedUser: createUserType;
@@ -30,6 +32,7 @@ export const CardComponent = (props: {
   const [isInfoLoading, setIsInfoLoading] = useState<boolean>(false);
 
   const jwt = localStorage.getItem("jwt");
+  const navigate = useNavigate();
 
   useEffect(() => {
     props.loggedUser;
@@ -66,6 +69,7 @@ export const CardComponent = (props: {
   return (
     <>
       <S.SpaceCard>
+
         {isInfoLoading ? (
           <S.LoadingIcon src={LoadingIconCard} />
         ) : (
@@ -111,7 +115,7 @@ export const CardComponent = (props: {
                   ) : (
                     ""
                   )}
-                  <S.BtnBuyProduct type="submit">COMPRAR</S.BtnBuyProduct>
+                  <S.BtnBuyProduct type="submit" onClick={() => navigate("/ProductPage/:productId")} >COMPRAR</S.BtnBuyProduct>
                 </S.PriceBtnBuy>
               </S.CardProduct>
 

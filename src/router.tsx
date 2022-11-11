@@ -6,6 +6,7 @@ import {AboutUs} from "./pages/AboutUs"
 import { ConfirmEmailPage } from "./pages/ConfirmEmail";
 import { RecoverPassword } from "./pages/RecoverPassword";
 import { UpdatePassword } from "./pages/UpdatePassword";
+import {ProductPage} from "./pages/ProductPage";
 
 export const Router = () => {
   return (
@@ -17,6 +18,7 @@ export const Router = () => {
       <Route path="/recover-password" element={<RecoverPassword />} />
       <Route path="/aboutUs" element={<AboutUs/>}/>
       <Route path="/update-password/:id" element={<UpdatePassword/>}/>
+      <Route path="/ProductPage/:productId" element={<ProductPage ProductID={""} />}/>
     </Routes>
   );
 };
