@@ -104,6 +104,8 @@ export const AboutUs = () => {
             <S.TituloAboutUsDev>Elieldo Martins</S.TituloAboutUsDev>
             Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
             Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
+            dimensões.Olá , Meu nome é Elieldo Martins, sou desenvolvedor Back-End.<br/>
+            Gosto de estudar desenvolvimento pessoal pois creio que são úteis em várias 
             dimensões.<br/><br/><br/>
             </S.TextoAboutUsDev>
         </S.TimeAboutUs>
