@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import LoginBackground from "../../assets/Images/LoginBackground.jpg";
 
-export const MainSection = styled.section`
+export const MessageField = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: 100%;
@@ -16,13 +16,25 @@ export const MainSection = styled.section`
   `}
 `;
 
-export const CardLogin = styled.div`
+export const CardLogin = styled.form`
   ${({ theme }) => css`
-    ${theme.mixins.CardLoginPage}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 28rem;
+    height: 16rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-radius: 0.7rem;
+    -webkit-box-shadow: 2px 10px 9px 2px #000000;
+    box-shadow: 2px 10px 9px 2px #000000;
+    font-family: ${theme.constants.fontFamilyHeader};
   `}
 `;
 
-export const InputLoginField = styled.form`
+export const InputLoginField = styled.section`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -37,12 +49,23 @@ export const InputLabelLogin = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.3rem;
     margin-bottom: 1rem;
     .label {
+      margin-right: 4.7rem;
       font-family: ${theme.constants.fontFamilyHeader};
       color: ${theme.colors.logoLoginPage};
     }
+  `}
+`;
+
+export const TitleRecoverEmail = styled.h1`
+  ${({ theme }) => css`
+    font-size: ${theme.constants.fontSizeLogoHeader};
+    font-family: ${theme.constants.fontFamilyHeader};
+    font-weight: bold;
+    color: ${theme.colors.hoverHeaderColor};
   `}
 `;
 
@@ -58,13 +81,14 @@ export const LabelLogin = styled.label`
 export const InputLogin = styled.input`
   ${({ theme }) => css`
     background-color: transparent;
-    width: 24rem;
+    width: 20rem;
     font-size: 1.02rem;
     border: 1px solid transparent;
     border-bottom-color: #fff;
     outline: 0;
     transition: all 0.3s ease-in-out;
     color: #fff;
+    margin-top: .5rem;
     :focus {
       background: none;
       border-bottom: 2px solid ${theme.colors.hoverHeaderColor};
@@ -75,88 +99,29 @@ export const InputLogin = styled.input`
   `}
 `;
 
-export const LinkRegisterPage = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    /* margin-left: -5.5rem; */
-    margin-top: -1rem;
-  `}
-`;
-
-export const pLoginPage = styled.p`
-  ${({ theme }) => css`
-    color: white;
-    text-align: center;
-  `}
-`;
-
-export const spanLoginPage = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.logoLoginPage};
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    :hover {
-      font-weight: bold;
-    }
-  `}
-`;
-
 export const btnLogin = styled.button`
   ${({ theme }) => css`
-    ${theme.mixins.BtnLoginPage}
-  `}
-`;
-
-export const headerCardLogin = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    /* margin-top: .6rem; */
-  `}
-`;
-
-export const logoNameLoginPage = styled.div`
-  ${({ theme }) => css`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 20rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
     font-family: ${theme.constants.fontFamilyLogoHeader};
-    font-size: ${theme.constants.fontSizeCardLogin};
-    color: ${theme.colors.logoLoginPage};
-    width: 100%;
-    /* gap: .5rem; */
-    /* margin-top: -2rem; */
-  `}
-`;
-
-export const titleCardLogin = styled.p`
-  ${({ theme }) => css`
-    text-align: center;
+    font-size: ${theme.constants.fontSizeBtnCardLogin};
     color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-family: ${theme.constants.fontFamilyLogoHeader};
-    margin-top: -0.2rem;
+    background-color: #009e45;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    :hover {
+      background-color: ${theme.colors.hoverHeaderColor};
+      -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+      box-shadow: 0px 0px 6px 0px #04bf55;
+    }
   `}
-`;
-
-export const NatureLogo = styled.img`
-  ${({ theme }) => css`
-    width: 5rem;
-    height: 5rem;
-    margin-left: -0.7rem;
-  `}
-`;
-
-export const spanLogoLoginPage = styled.span`
-  /* font-size: ; */
 `;
 
 export const IconBack = styled.img`
@@ -170,20 +135,6 @@ export const IconBack = styled.img`
     transition: all 0.5s ease-in-out;
     :hover {
       transform: scale(1.08);
-    }
-  `}
-`;
-
-export const RecoverPassword = styled.span`
-  ${({ theme }) => css`
-    text-align: start;
-    color: ${theme.colors.logoLoginPage};
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border-left: 2px solid green;
-    padding-left: .5rem;
-    :hover {
-      font-weight: bold;
     }
   `}
 `;

@@ -20,7 +20,7 @@ export const LoadingCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: ${theme.colors.searchColor};
+    background-color: ${theme.colors.footerColor};
     height: 28rem;
     width: 39rem;
     border-radius: 0.5rem;
@@ -42,7 +42,7 @@ export const LoadingH1Component = styled.h1`
     font-size: 2rem;
     font-weight: bold;
     margin: 1rem 0 0 0;
-    color: #014034;
+    color: #C2F2DC;
   `}
 `;
 
@@ -76,7 +76,7 @@ export const FooterLoadingComponent = styled.footer`
   ${({ theme }) => css`
     font-size: 1.5rem;
     font-weight: bold;
-    color: #014034;
+    color: #C2F2DC;
     margin-top: 0.5rem;
   `}
 `;

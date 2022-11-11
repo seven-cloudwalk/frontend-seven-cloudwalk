@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import LogoNatureDark from "../../assets/Icons/LogoNatureFuture.png"
+import LogoNatureDark from "../../assets/Icons/LogoNature.png"
 import * as S from "./style";
 
 export const FooterComponent = () => {

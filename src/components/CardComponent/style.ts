@@ -11,7 +11,7 @@ export const SpaceCard = styled.section`
   /* overflow-y: scroll;
   overflow-x: hidden; */
   gap: 5rem;
-  margin-top: 1.5rem;
+  margin-top: -2rem;
   ::-webkit-scrollbar {
     width: 0.4rem;
   }
@@ -97,3 +97,9 @@ export const OptionsBtn = styled.img`
     ${theme.mixins.OptionsBtnCard}
   `}
 `;
+
+export const LoadingIcon = styled.img`
+${({ theme }) => css`
+    width: 15rem;
+  `}
+`

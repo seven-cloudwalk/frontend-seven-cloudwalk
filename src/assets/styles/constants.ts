@@ -25,4 +25,7 @@ export const constants = {
   fontSizeLogoFooter: "2.5rem",
   fontSizeItensFooter:"14px",
 
+  fontSizeModalConfEmail: "1.6rem",
+
+
 };

@@ -6,7 +6,7 @@ import productService from "../../services/productService";
 import ManagerLogo from "../../assets/Images/ImgModal.png";
 import swal from "sweetalert";
 import * as S from "./style";
-import "./style.css"
+import "./style.css";
 
 export const ModalComponent = (props: {
   closeModal: boolean | any;
@@ -34,11 +34,14 @@ export const ModalComponent = (props: {
     image: "",
   });
 
+  // const [inputValue, setInputValue] = useState(
+  //   option == "CREATE" ? "" : products.name
+  // );
+
   useEffect(() => {
     setProducts(props.treeData);
     setProductId(props.productID);
     getProductByIdData(props.productID);
-    compareType();
   }, []);
 
   const getProductByIdData = async (productID: string) => {
@@ -48,6 +51,7 @@ export const ModalComponent = (props: {
       setIsInfoLoading(false);
     }
     setProducts(response.data);
+    compareType();
   };
 
   const compareType = () => {
@@ -72,7 +76,6 @@ export const ModalComponent = (props: {
     }
   };
 
-  //TODO FAZER TODO O CRUD PRODUCTS PORRA
   const handleOption = (event: any) => {
     setOption(event.target.id);
     console.log(event.target.id);
@@ -108,7 +111,7 @@ export const ModalComponent = (props: {
   const createProduct = async () => {
     const response = await productService.createProducts(createProducts);
     if (response) {
-      toast.success("Uma nova semente foi plantada! 🌱🌳");
+      toast.success("Uma nova semente foi plantada! 🌱");
       setTimeout(() => {
         window.location.reload();
       }, 2000);
@@ -119,8 +122,8 @@ export const ModalComponent = (props: {
 
   const updProduct = async () => {
     const updateProduct = await productService.updateProducts(
-      createProducts,
-      productId
+      productId,
+      createProducts
     );
     if (updateProduct.status == 200) {
       toast.success("Semente renovada!");
@@ -185,6 +188,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.name}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -197,6 +201,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.category}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -209,6 +214,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : products.description}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -221,6 +227,7 @@ export const ModalComponent = (props: {
               autoComplete="off"
               placeholder={option == "CREATE" ? "" : `R$ ${products.price}`}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 
@@ -232,6 +239,7 @@ export const ModalComponent = (props: {
               id="image"
               placeholder={option == "CREATE" ? "" : products.image}
               onChange={handleChangesValues}
+              required={false}
             />
           </S.InputField>
 

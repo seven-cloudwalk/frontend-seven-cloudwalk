@@ -2,16 +2,34 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserType, productType } from "../../types/types";
 import { ModalComponent } from "../ModalComponent";
-import Modal from "react-modal";
-import EditLogo from "../../assets/Icons/editIcon.png";
+import { LoadingComponent } from "../LoadingComponent";
+import StarRatingComponent from "react-star-rating-component";
 import productService from "../../services/productService";
+import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
+import EditLogo from "../../assets/Icons/editIcon.png";
+import Modal from "react-modal";
 import * as S from "./style";
 import {ProductPage} from "../../pages/ProductPage"
 
-export const CardComponent = (props: { loggedUser: createUserType }) => {
+export const CardComponent = (props: {
+  loggedUser: createUserType;
+  inputSearch: string;
+  infoLoading: boolean;
+}) => {
   const [modalIsOpen, setIsOpen] = useState<boolean | any>(false);
-  const [products, setProducts] = useState<productType[]>([]);
+  const [products, setProducts] = useState<productType[]>([
+    {
+      name: "",
+      category: "",
+      description: "",
+      price: 26,
+      image: "",
+    },
+  ]);
+
   const [productId, setProductId] = useState<string | any>("");
+
+  const [isInfoLoading, setIsInfoLoading] = useState<boolean>(false);
 
   const jwt = localStorage.getItem("jwt");
   const navigate = useNavigate();
@@ -19,12 +37,26 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
   useEffect(() => {
     props.loggedUser;
     getAllProductsData();
+    setIsInfoLoading(props.infoLoading);
+    console.log(props.infoLoading);
   }, []);
 
   const getAllProductsData = async () => {
+    setIsInfoLoading(props.infoLoading);
     const response = await productService.getAllProducts();
+    if (response) {
+      setIsInfoLoading(!props.infoLoading);
+    }
     setProducts(response.data);
   };
+
+  const searchProducts = products.filter((prod) => {
+    if (props.inputSearch === "") {
+      return prod;
+    } else {
+      return prod.name.toLowerCase().includes(props.inputSearch);
+    }
+  });
 
   function openModal() {
     setIsOpen(true);
@@ -37,63 +69,79 @@ export const CardComponent = (props: { loggedUser: createUserType }) => {
   return (
     <>
       <S.SpaceCard>
-        {products.map((tree) => (
-          <>
-            <S.CardProduct key={tree.id} onClick={() => setProductId(tree.id)}>
-              <S.InfoProduct >
-                <S.LeftSide>
-                  <S.NameProduct>{tree.name}</S.NameProduct>
-                  <S.DescriptionProduct>
-                    {tree.description}
-                  </S.DescriptionProduct>
 
-                  {/* <StarRatingComponent
-                    name="Rating"
-                    value={5}
-                    starCount={5}
-                    starColor={"#04bf55"}
-                    editing={false}
-                  /> */}
-                </S.LeftSide>
+        {isInfoLoading ? (
+          <S.LoadingIcon src={LoadingIconCard} />
+        ) : (
+          searchProducts.map((tree) => (
+            <>
+              <S.CardProduct
+                key={tree.id}
+                onClick={() => setProductId(tree.id)}
+              >
+                <S.InfoProduct>
+                  <S.LeftSide>
+                    <S.NameProduct>{tree.name}</S.NameProduct>
+                    <S.DescriptionProduct>
+                      {tree.description}
+                    </S.DescriptionProduct>
 
-                <S.RightSide>
-                  <S.ImgProduct src={tree.image} alt="Ilustração da arvore" />
-                </S.RightSide>
-              </S.InfoProduct>
+                    <StarRatingComponent
+                      name="Rating"
+                      value={5}
+                      starCount={5}
+                      starColor={"#04bf55"}
+                      editing={false}
+                    />
+                  </S.LeftSide>
 
-              <S.PriceBtnBuy>
-                <S.PriceProduct>R$ {tree.price}</S.PriceProduct>
-                {props.loggedUser.roleAdmin === true ? (
-                  <S.OptionsBtn onClick={openModal} src={EditLogo} />
-                ) : (
-                  ""
-                )}
-                <S.BtnBuyProduct type="submit" onClick={() => navigate("/ProductPage/:productId")} >COMPRAR</S.BtnBuyProduct>
-              </S.PriceBtnBuy>
-            </S.CardProduct>
+                  <S.RightSide>
+                    <S.ImgProduct
+                      src={tree.image}
+                      alt={`Imagem ilustrativa da arvore ${tree.name}`}
+                    />
+                  </S.RightSide>
+                </S.InfoProduct>
 
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={{
-                content: {
-                  border: "none",
-                  backgroundColor: "transparent",
-                },
-                overlay: {
-                  border: "none",
-                  backgroundColor: "#00000052",
-                },
-              }}
-            >
-              <ModalComponent
-                treeData={tree}
-                productID={productId}
-                closeModal={closeModal}
-              />
-            </Modal>
-          </>
-        ))}
+                <S.PriceBtnBuy>
+                  <S.PriceProduct>
+                    {tree.price.toLocaleString("pt-br", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </S.PriceProduct>
+                  {props.loggedUser.roleAdmin === true ? (
+                    <S.OptionsBtn onClick={openModal} src={EditLogo} />
+                  ) : (
+                    ""
+                  )}
+                  <S.BtnBuyProduct type="submit" onClick={() => navigate("/ProductPage/:productId")} >COMPRAR</S.BtnBuyProduct>
+                </S.PriceBtnBuy>
+              </S.CardProduct>
+
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={{
+                  content: {
+                    border: "none",
+                    backgroundColor: "transparent",
+                  },
+                  overlay: {
+                    border: "none",
+                    backgroundColor: "#00000013",
+                  },
+                }}
+              >
+                <ModalComponent
+                  treeData={tree}
+                  productID={productId}
+                  closeModal={closeModal}
+                />
+              </Modal>
+            </>
+          ))
+        )}
       </S.SpaceCard>
     </>
   );
