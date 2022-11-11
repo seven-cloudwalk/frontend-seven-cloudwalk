@@ -461,6 +461,101 @@ const IconRedes = () => css`
   height: 32px;
 `;
 
+const ProductInfo = () => css`
+  margin:100pt 15%;
+  background-color: ${colors.backgroundCard};
+  display:flex;
+  justify-content:center;
+  border-radius:40pt;
+  align-items: center;
+
+`;
+
+const ProductInfoImage = () => css`
+  height:300px;
+  width:auto;
+  padding:5%;
+`;
+const ProductInfoTitle = () => css` 
+font-size: 30pt;
+  text-align:center;
+  line-height:0;
+  font-family: ${constants.fontFamilyLogoHeader};
+  color: ${colors.textLogoColor};
+`;
+const ProductInfoSubtitle = () => css`
+  font-size: 16pt;
+  text-align:center;
+  font-weight:normal;
+  line-height:1.8;
+  color: ${colors.textLogoColor};
+  
+`;
+const ProductInfoPrice = () => css`
+margin-top:10%;
+display:flex;
+align-items: center;
+justify-content: space-evenly;
+`;
+const ProductInfoCategory = () => css`
+text-align:center;
+line-height:0.2;
+color: ${colors.textLogoColor};
+`;
+const ProductInfo2 = () => css`
+width:40%;
+`;
+const ProductInfoValor = () => css`
+font-weight: bold;
+font-size: 16pt;
+color: ${colors.textLogoColor}
+`;
+const ProductInfoBotao = () => css`
+font-size: 16pt;
+color: ${colors.textLogoColor};
+display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  background-color: ${colors.buttonColor};
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  :hover {
+    color: #fff;
+    background-color: ${colors.hoverHeaderColor};
+    -webkit-box-shadow: 0px 0px 6px 0px #04bf55;
+    box-shadow: 0px 0px 6px 0px #04bf55;
+  }
+`;
+const AboutUsLinks = () => css`
+  text-decoration: none;
+  display:flex;
+  flex-direction: row;
+  padding-right:50pt;
+  font-size:16.8pt;
+  align-items:center;
+  color: ${colors.textLogoColor}
+
+`;
+const AboutUsIcon = () => css`
+  width:32pt;
+  height:32pt;
+  padding-right:5pt;
+`;
+const Proposta = () => css`
+width:80%;
+margin:0 10%;
+`;
+const LinksDev = () => css`
+  display:flex;
+`;
+
 export const mixins = {
   Header,
   LogoHeader,
@@ -501,4 +596,17 @@ export const mixins = {
   TextoAboutUsDev,
   LinksDevs,
   IconRedes,
+  ProductInfo,
+  ProductInfoImage,
+  ProductInfoTitle,
+  ProductInfoSubtitle,
+  ProductInfoPrice,
+  ProductInfoCategory,
+  ProductInfo2,
+  ProductInfoValor,
+  ProductInfoBotao,
+  AboutUsLinks,
+  AboutUsIcon,
+  Proposta,
+  LinksDev,
 };

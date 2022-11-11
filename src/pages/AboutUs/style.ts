@@ -79,3 +79,23 @@ export const TextoAboutUsDev = styled.p`
         ${theme.mixins.TextoAboutUsDev}
     `}
 `;
+export const AboutUsLinks = styled.a`
+    ${({ theme }) => css`
+        ${theme.mixins.AboutUsLinks}
+    `}
+`;
+export const AboutUsIcon = styled.img`
+    ${({ theme }) => css`
+        ${theme.mixins.AboutUsIcon}
+    `}
+`;
+export const Proposta = styled.img`
+    ${({ theme }) => css`
+        ${theme.mixins.Proposta}
+    `}
+`;
+export const LinksDev = styled.a`
+    ${({ theme }) => css`
+        ${theme.mixins.LinksDev}
+    `}
+`;
