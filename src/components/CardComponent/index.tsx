@@ -4,9 +4,9 @@ import { ModalComponent } from "../ModalComponent";
 import { LoadingComponent } from "../LoadingComponent";
 import StarRatingComponent from "react-star-rating-component";
 import productService from "../../services/productService";
+import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
 import EditLogo from "../../assets/Icons/editIcon.png";
 import Modal from "react-modal";
-import LoadingIconCard from "../../assets/Icons/LoadingHome.gif";
 import * as S from "./style";
 
 export const CardComponent = (props: {
@@ -24,7 +24,9 @@ export const CardComponent = (props: {
       image: "",
     },
   ]);
+
   const [productId, setProductId] = useState<string | any>("");
+
   const [isInfoLoading, setIsInfoLoading] = useState<boolean>(false);
 
   const jwt = localStorage.getItem("jwt");
