@@ -38,7 +38,6 @@ export const CardComponent = (props: {
     props.loggedUser;
     getAllProductsData();
     setIsInfoLoading(props.infoLoading);
-    console.log(props.infoLoading);
   }, []);
 
   const getAllProductsData = async () => {
@@ -115,7 +114,7 @@ export const CardComponent = (props: {
                   ) : (
                     ""
                   )}
-                  <S.BtnBuyProduct type="submit" onClick={() => navigate("/ProductPage/:productId")} >COMPRAR</S.BtnBuyProduct>
+                  <S.BtnBuyProduct type="submit" onClick={() => navigate(`/product-page/${tree.id}`)} >COMPRAR</S.BtnBuyProduct>
                 </S.PriceBtnBuy>
               </S.CardProduct>
 
