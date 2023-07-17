@@ -1,9 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./router";
 import { ThemeProvider } from "styled-components";
+import { ToastContainer } from "react-toastify";
 import theme from "./assets/styles/theme";
 import "./App.css";
-import { ToastContainer } from "react-toastify";
 
 function App() {
   return (

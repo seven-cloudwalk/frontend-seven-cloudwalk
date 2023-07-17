@@ -21,7 +21,6 @@ const CardSpace = () => css`
   gap: 5rem;
   width: 100%;
   height: 100%;
-  
 `;
 
 const Header = () => css`
@@ -462,58 +461,56 @@ const IconRedes = () => css`
 `;
 
 const ProductInfo = () => css`
-  margin:100pt 15%;
+  margin: 100pt 15%;
   background-color: ${colors.backgroundCard};
-  display:flex;
-  justify-content:center;
-  border-radius:40pt;
+  display: flex;
+  justify-content: center;
+  border-radius: 40pt;
   align-items: center;
-
 `;
 
 const ProductInfoImage = () => css`
-  height:300px;
-  width:auto;
-  padding:5%;
+  height: 300px;
+  width: auto;
+  padding: 5%;
 `;
-const ProductInfoTitle = () => css` 
-font-size: 30pt;
-  text-align:center;
-  line-height:0;
+const ProductInfoTitle = () => css`
+  font-size: 30pt;
+  text-align: center;
+  line-height: 0;
   font-family: ${constants.fontFamilyLogoHeader};
   color: ${colors.textLogoColor};
 `;
 const ProductInfoSubtitle = () => css`
   font-size: 16pt;
-  text-align:center;
-  font-weight:normal;
-  line-height:1.8;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.8;
   color: ${colors.textLogoColor};
-  
 `;
 const ProductInfoPrice = () => css`
-margin-top:10%;
-display:flex;
-align-items: center;
-justify-content: space-evenly;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 const ProductInfoCategory = () => css`
-text-align:center;
-line-height:0.2;
-color: ${colors.textLogoColor};
+  text-align: center;
+  line-height: 0.2;
+  color: ${colors.textLogoColor};
 `;
 const ProductInfo2 = () => css`
-width:40%;
+  width: 40%;
 `;
 const ProductInfoValor = () => css`
-font-weight: bold;
-font-size: 16pt;
-color: ${colors.textLogoColor}
+  font-weight: bold;
+  font-size: 16pt;
+  color: ${colors.textLogoColor};
 `;
 const ProductInfoBotao = () => css`
-font-size: 16pt;
-color: ${colors.textLogoColor};
-display: flex;
+  font-size: 16pt;
+  color: ${colors.textLogoColor};
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 12rem;
@@ -535,25 +532,24 @@ display: flex;
 `;
 const AboutUsLinks = () => css`
   text-decoration: none;
-  display:flex;
+  display: flex;
   flex-direction: row;
-  padding-right:50pt;
-  font-size:16.8pt;
-  align-items:center;
-  color: ${colors.textLogoColor}
-
+  padding-right: 50pt;
+  font-size: 16.8pt;
+  align-items: center;
+  color: ${colors.textLogoColor};
 `;
 const AboutUsIcon = () => css`
-  width:32pt;
-  height:32pt;
-  padding-right:5pt;
+  width: 32pt;
+  height: 32pt;
+  padding-right: 5pt;
 `;
 const Proposta = () => css`
-width:80%;
-margin:0 10%;
+  width: 80%;
+  margin: 0 10%;
 `;
 const LinksDev = () => css`
-  display:flex;
+  display: flex;
 `;
 
 export const mixins = {

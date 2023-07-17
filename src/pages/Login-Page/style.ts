@@ -7,7 +7,7 @@ export const MainSection = styled.section`
     height: 100%;
     background: url(${LoginBackground});
     background-size: 100% 100%;
-    background-attachment: fixed;
+    background-attachment: fixed; 
     background-position: bottom;
     background-blend-mode: darken;
     display: flex;

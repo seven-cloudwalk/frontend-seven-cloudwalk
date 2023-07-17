@@ -20,6 +20,7 @@ body,
   width: 10px;
   background: #000;
 }
+
 ::-webkit-scrollbar-thumb {
   /* background: #04bf5592; */
   background-color: #04bf55;

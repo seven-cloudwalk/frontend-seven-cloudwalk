@@ -30,7 +30,7 @@ export const LoginPage = () => {
     const jwt = response.data.token;
 
     if (!jwt) {
-      toast.error(response.data.message)
+      toast.error(`${response.data.message}`)
     } else {
       localStorage.setItem("jwt", jwt);
       navigate("/");

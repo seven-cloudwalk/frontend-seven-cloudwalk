@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://seven-cloudwalk.herokuapp.com/",
+  baseURL: "https://web-production-9bdf.up.railway.app",
+  // baseURL: "localhost:3500",
 });
 
 api.interceptors.request.use((config: any) => {

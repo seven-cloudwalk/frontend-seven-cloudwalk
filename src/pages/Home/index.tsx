@@ -159,11 +159,11 @@ export const Home = () => {
         </S.SearchSpace>
 
         <S.SpaceCards>
-            <CardComponent
-              loggedUser={userLogged}
-              inputSearch={inputSearchProducts}
-              infoLoading={true}
-            />
+          <CardComponent
+            loggedUser={userLogged}
+            inputSearch={inputSearchProducts}
+            infoLoading={true}
+          />
         </S.SpaceCards>
 
         {/* <S.FolhasImg src={Folhas} /> */}

@@ -50,8 +50,6 @@ export const InputLabelLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 1rem; */
-    /* line-height: 2; */
     margin-bottom: 1rem;
     .label {
       margin-right: 11rem;
